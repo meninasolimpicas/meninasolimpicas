@@ -1,0 +1,790 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root{
+    --primary:#1f2a44;
+    --primary-dark:#132039;
+    --secondary:#16a5a3;
+    --secondary-hover:#0e8f8d;
+    --white:#fff;
+    --background:#f4f6f8;
+    --text:#1c2540;
+    --text-light:#667085;
+    --border:#dbe1e7;
+    --shadow:0 16px 35px rgba(20,32,56,.13);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--background);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+img{
+    display:block;
+    max-width:100%;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button{
+    font:inherit;
+}
+
+.container{
+    width:min(1180px,90%);
+    margin:0 auto;
+}
+
+.site-header{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    padding:18px 0;
+    z-index:1000;
+}
+
+.nav{
+    display:grid;
+    grid-template-columns:260px 1fr auto;
+    align-items:center;
+    gap:25px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.logo-text{
+    display:flex;
+    flex-direction:column;
+    color:#fff;
+    font-family:'Fraunces',serif;
+    line-height:1.05;
+}
+
+.logo-text strong{
+    font-size:16px;
+}
+
+.logo-text span{
+    font-size:18px;
+    font-weight:700;
+}
+
+#nav-principal{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:22px;
+}
+
+#nav-principal > a,
+.dropdown-toggle{
+    position:relative;
+    color:#fff;
+    font-size:13px;
+    font-weight:600;
+    white-space:nowrap;
+}
+
+#nav-principal > a::after,
+.dropdown-toggle::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-7px;
+    width:0;
+    height:2px;
+    background:var(--secondary);
+    transition:width .25s ease;
+}
+
+#nav-principal > a:hover::after,
+.dropdown-toggle:hover::after,
+.dropdown-toggle.ativo::after{
+    width:100%;
+}
+
+.dropdown{
+    position:relative;
+}
+
+.dropdown-toggle{
+    display:flex;
+    align-items:center;
+    gap:4px;
+}
+
+.dropdown-toggle i{
+    font-size:18px;
+    transition:transform .25s ease;
+}
+
+.dropdown:hover .dropdown-toggle i{
+    transform:rotate(180deg);
+}
+
+.submenu{
+    position:absolute;
+    top:calc(100% + 14px);
+    left:0;
+    width:235px;
+    padding:10px 0;
+    background:#111c32;
+    border:1px solid rgba(255,255,255,.12);
+    box-shadow:0 18px 35px rgba(0,0,0,.25);
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(8px);
+    transition:
+        opacity .25s ease,
+        visibility .25s ease,
+        transform .25s ease;
+}
+
+.submenu-olimpiadas{
+    width:275px;
+}
+
+.dropdown:hover .submenu{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+
+.submenu a{
+    display:block;
+    padding:12px 18px;
+    color:#fff;
+    font-size:14px;
+    transition:background .2s ease;
+}
+
+.submenu a:hover,
+.submenu a.ativo{
+    background:var(--secondary);
+}
+
+.portal-btn{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    padding:12px 17px;
+    border-radius:9px;
+    background:var(--secondary);
+    color:#fff;
+    font-size:13px;
+    font-weight:700;
+    transition:background .25s ease;
+}
+
+.portal-btn:hover{
+    background:var(--secondary-hover);
+}
+
+.menu-mobile{
+    display:none;
+    border:0;
+    background:transparent;
+    color:#fff;
+    font-size:31px;
+    cursor:pointer;
+}
+
+.olimp-hero{
+    min-height:690px;
+    display:flex;
+    align-items:center;
+    padding:145px 0 80px;
+    background:var(--primary-dark);
+}
+
+.olimp-hero-grid{
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    align-items:center;
+    gap:65px;
+}
+
+.olimp-hero-texto > span,
+.titulo-secao > span{
+    display:block;
+    margin-bottom:12px;
+    color:var(--secondary);
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.olimp-hero-texto h1{
+    color:#fff;
+    font-family:'Fraunces',serif;
+    font-size:63px;
+    line-height:1.05;
+}
+
+.olimp-hero-texto p{
+    max-width:560px;
+    margin-top:22px;
+    color:#d3dbe7;
+    font-size:18px;
+    line-height:1.7;
+}
+
+.hero-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    margin-top:27px;
+    padding:14px 19px;
+    background:var(--secondary);
+    color:#fff;
+    font-size:13px;
+    font-weight:700;
+    transition:
+        background .25s ease,
+        transform .25s ease;
+}
+
+.hero-btn:hover{
+    background:var(--secondary-hover);
+    transform:translateY(-2px);
+}
+
+/* IMAGENS REDONDAS DO TOPO */
+
+.olimp-hero-mosaico{
+    display:grid;
+    grid-template-columns:repeat(2,220px);
+    justify-content:center;
+    align-items:center;
+    gap:28px;
+}
+
+.olimp-hero-mosaico img{
+    width:220px;
+    height:220px;
+    aspect-ratio:1;
+    border-radius:50%;
+    object-fit:contain;
+    object-position:center;
+    padding:15px;
+    background:#fff;
+    border:5px solid var(--secondary);
+    box-shadow:
+        0 0 0 8px rgba(22,165,163,.13),
+        0 18px 38px rgba(0,0,0,.25);
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.olimp-hero-mosaico img:hover{
+    transform:translateY(-6px) scale(1.04);
+    box-shadow:
+        0 0 0 9px rgba(22,165,163,.19),
+        0 24px 45px rgba(0,0,0,.3);
+}
+
+.olimp-secao{
+    padding:90px 0;
+    background:#fff;
+}
+
+.secao-cinza{
+    background:#f1f4f6;
+}
+
+.secao-azul{
+    background:var(--primary);
+}
+
+.secao-verde{
+    background:var(--secondary);
+}
+
+.titulo-secao{
+    max-width:790px;
+    margin-bottom:42px;
+}
+
+.titulo-secao h2{
+    color:var(--primary);
+    font-family:'Fraunces',serif;
+    font-size:46px;
+    line-height:1.13;
+}
+
+.titulo-claro > span,
+.titulo-claro h2,
+.titulo-claro p{
+    color:#fff;
+}
+
+/* CARDS DAS OLIMPÍADAS FEMININAS */
+
+.mosaico-logos{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:22px;
+}
+
+.logo-card{
+    display:grid;
+    grid-template-columns:125px 1fr;
+    align-items:center;
+    min-height:155px;
+    padding:14px;
+    overflow:hidden;
+    background:#fff;
+    border:1px solid var(--border);
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
+}
+
+.logo-card:hover{
+    transform:translateY(-5px);
+    border-color:rgba(22,165,163,.5);
+    box-shadow:var(--shadow);
+}
+
+.logo-card img{
+    width:105px;
+    height:105px;
+    margin:auto;
+    padding:9px;
+    border:3px solid rgba(22,165,163,.35);
+    border-radius:50%;
+    background:#f8fafc;
+    object-fit:contain;
+    object-position:center;
+}
+
+.logo-card > div{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:18px;
+}
+
+.logo-card strong{
+    color:var(--primary);
+    font-family:'Fraunces',serif;
+    font-size:20px;
+    line-height:1.25;
+}
+
+.logo-card span{
+    margin-top:8px;
+    color:var(--secondary);
+    font-size:12px;
+    font-weight:700;
+}
+
+/* CARDS COMPACTOS */
+
+.mosaico-compacto{
+    display:grid;
+    grid-template-columns:repeat(6,minmax(0,1fr));
+    gap:18px;
+}
+
+.mini-logo{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    min-height:160px;
+    padding:18px 12px;
+    background:#fff;
+    border:1px solid var(--border);
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
+}
+
+.mini-logo:hover{
+    transform:translateY(-5px);
+    border-color:rgba(22,165,163,.5);
+    box-shadow:0 14px 30px rgba(20,32,56,.11);
+}
+
+.mini-logo img{
+    width:86px;
+    height:86px;
+    padding:8px;
+    border:3px solid rgba(22,165,163,.32);
+    border-radius:50%;
+    background:#fff;
+    object-fit:contain;
+    object-position:center;
+    transition:transform .25s ease;
+}
+
+.mini-logo:hover img{
+    transform:scale(1.06);
+}
+
+.mini-logo span{
+    margin-top:13px;
+    color:var(--primary);
+    font-size:12px;
+    font-weight:700;
+    line-height:1.35;
+    text-align:center;
+}
+
+.secao-azul .mini-logo,
+.secao-verde .mini-logo{
+    border-color:rgba(255,255,255,.28);
+}
+
+.frase-final{
+    padding:80px 0;
+    background:#eef2f5;
+    text-align:center;
+}
+
+.frase-final p{
+    max-width:850px;
+    margin:auto;
+    color:var(--primary);
+    font-family:'Fraunces',serif;
+    font-size:38px;
+    line-height:1.35;
+}
+
+.frase-final span{
+    display:block;
+    margin-top:18px;
+    color:var(--secondary);
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.footer{
+    background:#111c32;
+    color:#fff;
+}
+
+.footer-conteudo{
+    display:grid;
+    grid-template-columns:1.5fr .7fr;
+    gap:60px;
+    padding:62px 0 52px;
+}
+
+.footer-logo{
+    display:flex;
+    align-items:center;
+    gap:13px;
+    margin-bottom:20px;
+}
+
+.footer-logo img{
+    width:56px;
+    height:56px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.footer-logo strong,
+.footer-logo span{
+    display:block;
+}
+
+.footer-logo strong{
+    font-family:'Fraunces',serif;
+    font-size:19px;
+}
+
+.footer-logo span{
+    margin-top:4px;
+    color:var(--secondary);
+    font-size:11px;
+    font-weight:700;
+}
+
+.footer-marca > p{
+    max-width:520px;
+    color:#b8c2d2;
+    font-size:14px;
+    line-height:1.7;
+}
+
+.footer-links{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.footer-links h3{
+    margin-bottom:17px;
+    font-size:15px;
+}
+
+.footer-links a{
+    margin-bottom:10px;
+    color:#bac4d4;
+    font-size:14px;
+    transition:color .2s ease;
+}
+
+.footer-links a:hover{
+    color:var(--secondary);
+}
+
+.footer-final{
+    padding:20px 0;
+    border-top:1px solid rgba(255,255,255,.12);
+    color:#8f9bae;
+    font-size:12px;
+    text-align:center;
+}
+
+@media(max-width:1100px){
+
+    .nav{
+        grid-template-columns:220px 1fr auto;
+        gap:15px;
+    }
+
+    #nav-principal{
+        gap:14px;
+    }
+
+    #nav-principal > a,
+    .dropdown-toggle{
+        font-size:12px;
+    }
+
+    .olimp-hero-grid{
+        gap:45px;
+    }
+
+    .olimp-hero-mosaico{
+        grid-template-columns:repeat(2,180px);
+        gap:24px;
+    }
+
+    .olimp-hero-mosaico img{
+        width:180px;
+        height:180px;
+    }
+
+    .mosaico-compacto{
+        grid-template-columns:repeat(4,1fr);
+    }
+
+    .mosaico-logos{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:900px){
+
+    .nav{
+        display:flex;
+        justify-content:space-between;
+    }
+
+    #nav-principal{
+        position:absolute;
+        top:84px;
+        left:5%;
+        right:5%;
+        display:none;
+        align-items:flex-start;
+        flex-direction:column;
+        padding:23px;
+        background:#111c32;
+    }
+
+    #nav-principal.aberto{
+        display:flex;
+    }
+
+    .dropdown{
+        width:100%;
+    }
+
+    .submenu{
+        position:static;
+        display:none;
+        width:100%;
+        margin-top:10px;
+        opacity:1;
+        visibility:visible;
+        transform:none;
+        box-shadow:none;
+    }
+
+    .dropdown:hover .submenu{
+        display:block;
+    }
+
+    .portal-btn{
+        display:none;
+    }
+
+    .menu-mobile{
+        display:block;
+    }
+
+    .olimp-hero{
+        min-height:auto;
+        padding:135px 0 70px;
+    }
+
+    .olimp-hero-grid{
+        grid-template-columns:1fr;
+        gap:55px;
+    }
+
+    .olimp-hero-texto{
+        text-align:center;
+    }
+
+    .olimp-hero-texto p{
+        margin-right:auto;
+        margin-left:auto;
+    }
+
+    .olimp-hero-mosaico{
+        grid-template-columns:repeat(2,200px);
+    }
+
+    .olimp-hero-mosaico img{
+        width:200px;
+        height:200px;
+    }
+}
+
+@media(max-width:650px){
+
+    .logo-text strong{
+        font-size:13px;
+    }
+
+    .logo-text span{
+        font-size:14px;
+    }
+
+    .olimp-hero{
+        padding:125px 0 55px;
+    }
+
+    .olimp-hero-texto h1{
+        font-size:46px;
+    }
+
+    .olimp-hero-texto p{
+        font-size:16px;
+    }
+
+    .olimp-hero-mosaico{
+        grid-template-columns:repeat(2,135px);
+        gap:22px;
+    }
+
+    .olimp-hero-mosaico img{
+        width:135px;
+        height:135px;
+        padding:10px;
+        border-width:4px;
+        box-shadow:
+            0 0 0 6px rgba(22,165,163,.13),
+            0 15px 28px rgba(0,0,0,.22);
+    }
+
+    .olimp-secao{
+        padding:65px 0;
+    }
+
+    .titulo-secao h2{
+        font-size:36px;
+    }
+
+    .mosaico-logos{
+        grid-template-columns:1fr;
+    }
+
+    .mosaico-compacto{
+        grid-template-columns:repeat(2,1fr);
+        gap:13px;
+    }
+
+    .logo-card{
+        grid-template-columns:105px 1fr;
+    }
+
+    .logo-card img{
+        width:88px;
+        height:88px;
+    }
+
+    .mini-logo{
+        min-height:145px;
+        padding:15px 9px;
+    }
+
+    .mini-logo img{
+        width:75px;
+        height:75px;
+    }
+
+    .frase-final p{
+        font-size:28px;
+    }
+
+    .footer-conteudo{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:380px){
+
+    .olimp-hero-mosaico{
+        grid-template-columns:repeat(2,115px);
+        gap:18px;
+    }
+
+    .olimp-hero-mosaico img{
+        width:115px;
+        height:115px;
+    }
+
+    .mosaico-compacto{
+        grid-template-columns:1fr;
+    }
+}

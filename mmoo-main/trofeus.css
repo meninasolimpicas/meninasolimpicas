@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root{
+    --primary:#1f2a44;
+    --primary-dark:#132039;
+    --secondary:#16a5a3;
+    --secondary-dark:#0e8f8d;
+    --secondary-soft:#dcefed;
+    --background:#edf5f5;
+    --surface:#ffffff;
+    --surface-alt:#e2f0ef;
+    --text:#1c2540;
+    --text-light:#60727b;
+    --border:#d1e1e2;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--background);color:var(--text);overflow-x:hidden}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+button{font:inherit}
+ul{list-style:none}
+.container{width:min(1180px,90%);margin:0 auto}
+
+/* NAVEGAÇÃO */
+.site-header{position:absolute;inset:0 0 auto;width:100%;padding:18px 0;z-index:1000}
+.nav{display:grid;grid-template-columns:270px 1fr auto;align-items:center;gap:22px}
+.marca{display:flex;align-items:center;gap:12px;color:#fff}
+.marca-selo{width:56px;height:56px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:var(--secondary);font-size:15px;font-weight:700;letter-spacing:.08em}
+.marca-selo-menor{width:52px;height:52px}
+.marca-nome{display:flex;flex-direction:column;font-family:'Fraunces',serif;font-size:18px;line-height:1.04}
+.marca-nome strong{font-size:15px}
+#nav-principal{display:flex;align-items:center;justify-content:center;gap:20px}
+#nav-principal>a,.dropdown-toggle{position:relative;display:flex;align-items:center;gap:5px;padding:10px 0;border:0;background:transparent;color:#fff;font-size:13px;font-weight:600;white-space:nowrap;cursor:pointer}
+#nav-principal>a::after,.dropdown-toggle::after{content:'';position:absolute;left:0;bottom:2px;width:0;height:2px;background:var(--secondary);transition:.2s}
+#nav-principal>a:hover::after,.dropdown-toggle:hover::after,.dropdown-toggle.ativo::after{width:100%}
+.seta{display:inline-block;margin-top:-3px;font-size:17px;transition:.2s}
+.dropdown.aberto .seta{transform:rotate(180deg)}
+.dropdown{position:relative}
+.submenu{position:absolute;top:calc(100% + 10px);left:50%;width:235px;padding:9px;border:1px solid rgba(255,255,255,.12);border-radius:8px;background:#142038;box-shadow:0 20px 45px rgba(0,0,0,.28);opacity:0;visibility:hidden;pointer-events:none;transform:translate(-50%,8px);transition:.2s}
+.submenu-largo{width:275px}
+.dropdown.aberto .submenu{opacity:1;visibility:visible;pointer-events:auto;transform:translate(-50%,0)}
+.submenu a{display:block;padding:11px 13px;border-radius:5px;color:#fff;font-size:13px;line-height:1.35}
+.submenu a:hover,.submenu .ativo-submenu{background:var(--secondary)}
+.portal-btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 17px;border-radius:8px;background:var(--secondary);color:#fff;font-size:13px;font-weight:700;white-space:nowrap;transition:.2s}
+.portal-btn:hover{background:var(--secondary-dark);transform:translateY(-2px)}
+.menu-mobile{display:none;min-width:72px;height:42px;padding:0 14px;border:1px solid rgba(255,255,255,.3);border-radius:7px;background:transparent;color:#fff;font-size:12px;font-weight:700;cursor:pointer}
+
+/* HERO */
+.hero-trofeus{min-height:750px;display:flex;align-items:center;padding:145px 0 85px;background:radial-gradient(circle at 82% 30%,rgba(22,165,163,.31),transparent 29%),radial-gradient(circle at 92% 80%,rgba(84,211,205,.13),transparent 25%),linear-gradient(135deg,#132039 0%,#1f2a44 57%,#18535c 100%)}
+.hero-grid{display:grid;grid-template-columns:1fr .95fr;align-items:center;gap:72px}
+.hero-texto>span,.titulo-secao>span{display:block;margin-bottom:13px;color:#71ddd7;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase}
+.hero-texto h1{color:#fff;font-family:'Fraunces',serif;font-size:64px;line-height:1.02}
+.hero-texto h1 strong{display:block;color:#62d8d2}
+.hero-texto p{max-width:630px;margin-top:25px;color:#dbe8eb;font-size:18px;line-height:1.78}
+.hero-acoes{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.botao-principal,.botao-secundario{display:inline-flex;align-items:center;justify-content:center;padding:15px 20px;font-size:13px;font-weight:700}
+.botao-principal{background:var(--secondary);color:#fff}
+.botao-principal:hover{background:var(--secondary-dark)}
+.botao-secundario{border:1px solid rgba(255,255,255,.58);color:#fff}
+.botao-secundario:hover{background:#fff;color:var(--primary)}
+.hero-galeria{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:230px 230px;gap:14px}
+.hero-foto{overflow:hidden;border:7px solid rgba(255,255,255,.16);background:#fff;box-shadow:0 22px 48px rgba(0,0,0,.24)}
+.hero-foto-alta{grid-row:span 2}
+.hero-foto img{width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-foto-alta img{object-fit:contain;padding:10px;background:#fff}
+
+/* NÚMEROS */
+.numeros-faixa{border-bottom:1px solid var(--border);background:var(--surface-alt)}
+.numeros-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.numeros-grid article{min-height:125px;padding:26px;border-right:1px solid var(--border)}
+.numeros-grid article:last-child{border-right:0}
+.numeros-grid span{display:block;margin-bottom:7px;color:var(--secondary-dark);font-size:11px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase}
+.numeros-grid strong{color:var(--primary);font-family:'Fraunces',serif;font-size:20px;line-height:1.3}
+
+/* SEÇÕES EDITORIAIS */
+.introducao-secao{padding:95px 0;background:#e9f3f4}
+.introducao-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:90px}
+.titulo-secao{max-width:870px;margin-bottom:45px}
+.titulo-secao>span{color:var(--secondary-dark)}
+.titulo-secao h2{color:var(--primary);font-family:'Fraunces',serif;font-size:48px;line-height:1.12}
+.titulo-secao p{margin-top:15px;color:var(--text-light);font-size:16px;line-height:1.75}
+.titulo-central{text-align:center;margin-inline:auto}
+.titulo-claro>span,.titulo-claro h2,.titulo-claro p{color:#fff}
+.introducao-texto{display:grid;gap:22px}
+.introducao-texto p{padding-left:24px;border-left:4px solid var(--secondary);color:#526b73;font-size:16px;line-height:1.9}
+
+/* CARDS DE TROFÉUS */
+.acervo-secao,.categoria-secao{padding:100px 0}
+.acervo-secao{background:#f8fbfb}
+.categoria-secao{background:#e8f3f3}
+.categoria-escura{background:var(--primary)}
+.categoria-verde{background:linear-gradient(135deg,#0d7778,#16a5a3)}
+.trofeus-grid{display:grid;gap:22px}
+.trofeus-grid-quatro{grid-template-columns:repeat(4,1fr)}
+.trofeus-grid-tres{grid-template-columns:repeat(3,1fr)}
+.trofeu-card{display:flex;flex-direction:column;min-width:0;border:1px solid var(--border);background:var(--surface);box-shadow:0 12px 26px rgba(31,42,68,.07)}
+.trofeu-card-claro{border-color:rgba(255,255,255,.32);box-shadow:none}
+.trofeu-card figure{height:310px;overflow:hidden;background:#e1ebec}
+.trofeu-card figure.imagem-horizontal{height:250px}
+.trofeu-card figure img{width:100%;height:100%;object-fit:contain;object-position:center;background:#f2f6f6}
+.trofeu-info{display:flex;flex:1;flex-direction:column;padding:22px}
+.trofeu-info>span{color:var(--secondary-dark);font-size:10px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase}
+.trofeu-info h3{margin-top:10px;color:var(--primary);font-family:'Fraunces',serif;font-size:23px;line-height:1.2}
+.trofeu-info p{margin-top:12px;color:var(--text-light);font-size:13px;line-height:1.65}
+
+/* OPM */
+.opm-secao{padding:100px 0;background:#f8fbfb}
+.opm-cabecalho{display:grid;grid-template-columns:1fr .85fr;align-items:end;gap:70px;margin-bottom:45px}
+.opm-cabecalho .titulo-secao{margin-bottom:0}
+.opm-cabecalho>p{padding-left:24px;border-left:4px solid var(--secondary);color:var(--text-light);font-size:15px;line-height:1.8}
+.premiadas-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--border);border-left:1px solid var(--border)}
+.premiada-card{background:#fff;border-right:1px solid var(--border);border-bottom:1px solid var(--border)}
+.premiada-card figure{height:330px;overflow:hidden;background:#dfe9e9}
+.premiada-card img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.premiada-card>div{padding:22px}
+.premiada-card span{color:var(--secondary-dark);font-size:11px;font-weight:700;letter-spacing:1.4px}
+.premiada-card h3{margin-top:9px;color:var(--primary);font-family:'Fraunces',serif;font-size:22px;line-height:1.25}
+.premiada-card p{margin-top:7px;color:var(--text-light);font-size:13px}
+
+/* FINAL */
+.frase-final{padding:82px 0;background:#e6f2f1;text-align:center}
+.frase-final p{max-width:860px;margin:auto;color:var(--primary);font-family:'Fraunces',serif;font-size:39px;line-height:1.34}
+.frase-final span{display:block;margin-top:18px;color:var(--secondary-dark);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase}
+.footer{background:#132039;color:#fff}
+.footer-conteudo{display:grid;grid-template-columns:1.5fr .7fr;gap:60px;padding:62px 0 52px}
+.footer-identidade{display:flex;align-items:center;gap:13px;margin-bottom:20px}
+.footer-identidade strong,.footer-identidade span{display:block}
+.footer-identidade strong{font-family:'Fraunces',serif;font-size:19px}
+.footer-identidade div>span{margin-top:4px;color:#71ddd7;font-size:11px;font-weight:700}
+.footer-marca>p{max-width:520px;color:#b8cfd0;font-size:14px;line-height:1.7}
+.footer-links{display:flex;flex-direction:column;align-items:flex-start}
+.footer-links h3{margin-bottom:17px;font-size:15px}
+.footer-links a{margin-bottom:10px;color:#b8cfd0;font-size:14px}
+.footer-links a:hover{color:#71ddd7}
+.footer-final{padding:20px 0;border-top:1px solid rgba(255,255,255,.12);color:#8fa9ac;font-size:12px;text-align:center}
+
+@media(max-width:1100px){
+    .nav{grid-template-columns:220px 1fr auto;gap:14px}
+    #nav-principal{gap:13px}
+    #nav-principal>a,.dropdown-toggle{font-size:12px}
+    .hero-grid{gap:45px}
+    .hero-texto h1{font-size:55px}
+    .trofeus-grid-quatro{grid-template-columns:repeat(2,1fr)}
+    .trofeus-grid-tres{grid-template-columns:repeat(3,1fr)}
+    .premiadas-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:900px){
+    .nav{display:flex;justify-content:space-between}
+    .portal-btn{display:none}
+    .menu-mobile{display:flex;align-items:center;justify-content:center}
+    #nav-principal{position:absolute;top:82px;left:5%;right:5%;display:none;flex-direction:column;align-items:stretch;gap:3px;max-height:calc(100vh - 100px);overflow-y:auto;padding:14px;border-radius:10px;background:#142038;box-shadow:0 22px 45px rgba(0,0,0,.3)}
+    #nav-principal.aberto{display:flex}
+    #nav-principal>a,.dropdown-toggle{width:100%;justify-content:space-between;padding:13px 12px;border-radius:7px;font-size:14px}
+    #nav-principal>a::after,.dropdown-toggle::after{display:none}
+    .dropdown{width:100%}
+    .submenu,.submenu-largo{position:static;display:none;width:100%;margin:2px 0 8px;padding:7px;border:0;background:#1f2a44;box-shadow:none;opacity:1;visibility:visible;pointer-events:auto;transform:none}
+    .dropdown.aberto .submenu{display:block}
+    .hero-trofeus{min-height:auto;padding:135px 0 70px}
+    .hero-grid,.introducao-grid,.opm-cabecalho{grid-template-columns:1fr}
+    .hero-texto{text-align:center}
+    .hero-texto p{margin-inline:auto}
+    .hero-acoes{justify-content:center}
+    .hero-galeria{max-width:680px;width:100%;margin-inline:auto}
+    .numeros-grid{grid-template-columns:repeat(2,1fr)}
+    .numeros-grid article:nth-child(2){border-right:0}
+    .numeros-grid article:nth-child(-n+2){border-bottom:1px solid var(--border)}
+    .trofeus-grid-tres{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:650px){
+    .marca-nome{font-size:14px}
+    .marca-nome strong{font-size:12px}
+    .marca-selo{width:48px;height:48px;font-size:13px}
+    .hero-texto h1{font-size:43px}
+    .hero-texto p{font-size:16px}
+    .hero-acoes{flex-direction:column}
+    .botao-principal,.botao-secundario{width:100%}
+    .hero-galeria{grid-template-columns:1fr;grid-template-rows:270px 270px 270px}
+    .hero-foto-alta{grid-row:span 1}
+    .numeros-grid{grid-template-columns:1fr}
+    .numeros-grid article{border-right:0;border-bottom:1px solid var(--border)}
+    .numeros-grid article:last-child{border-bottom:0}
+    .introducao-secao,.acervo-secao,.categoria-secao,.opm-secao{padding:65px 0}
+    .titulo-secao h2{font-size:36px}
+    .trofeus-grid-quatro,.trofeus-grid-tres,.premiadas-grid{grid-template-columns:1fr}
+    .trofeu-card figure{height:320px}
+    .premiada-card figure{height:360px}
+    .frase-final p{font-size:28px}
+    .footer-conteudo{grid-template-columns:1fr}
+}
+.marca-logo{
+    width:56px;
+    height:56px;
+    border-radius:50%;
+    object-fit:cover;
+    flex-shrink:0;
+}
+
+.marca-logo-menor{
+    width:54px;
+    height:54px;
+}

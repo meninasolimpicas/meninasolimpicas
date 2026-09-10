@@ -1,0 +1,1225 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root{
+    --primary:#173c46;
+    --primary-dark:#102f37;
+    --secondary:#22b7b1;
+    --secondary-dark:#149690;
+    --secondary-light:#dff7f4;
+    --mint:#eefaf8;
+    --white:#fff;
+    --background:#f5faf9;
+    --text:#18343b;
+    --text-light:#64777b;
+    --border:#cfe5e2;
+    --gold:#c89a35;
+    --silver:#8e9aa1;
+    --bronze:#a96f47;
+    --shadow:0 16px 35px rgba(16,47,55,.12);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--background);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+img{
+    display:block;
+    max-width:100%;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button{
+    font:inherit;
+}
+
+ul{
+    list-style:none;
+}
+
+.container{
+    width:min(1180px,90%);
+    margin:0 auto;
+}
+
+/* CABEÇALHO */
+
+.site-header{
+    position:absolute;
+    inset:0 0 auto;
+    width:100%;
+    padding:18px 0;
+    z-index:1000;
+}
+
+.nav{
+    display:grid;
+    grid-template-columns:260px minmax(0,1fr) auto;
+    align-items:center;
+    gap:22px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.logo-text{
+    display:flex;
+    flex-direction:column;
+    color:#fff;
+    font-family:'Fraunces',serif;
+    line-height:1.05;
+}
+
+.logo-text strong{
+    font-size:16px;
+}
+
+.logo-text span{
+    font-size:18px;
+    font-weight:700;
+}
+
+#nav-principal{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+}
+
+#nav-principal > a,
+.dropdown-toggle{
+    position:relative;
+    display:flex;
+    align-items:center;
+    gap:5px;
+    padding:10px 0;
+    border:0;
+    background:transparent;
+    color:#fff;
+    font-size:13px;
+    font-weight:600;
+    white-space:nowrap;
+    cursor:pointer;
+}
+
+#nav-principal > a::after,
+.dropdown-toggle::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:2px;
+    width:0;
+    height:2px;
+    background:var(--secondary);
+    transition:.22s;
+}
+
+#nav-principal > a:hover::after,
+.dropdown-toggle:hover::after,
+.dropdown-toggle.ativo::after{
+    width:100%;
+}
+
+.dropdown{
+    position:relative;
+}
+
+.dropdown-toggle i{
+    font-size:18px;
+    transition:.22s;
+}
+
+.dropdown.aberto .dropdown-toggle i{
+    transform:rotate(180deg);
+}
+
+.submenu{
+    position:absolute;
+    top:calc(100% + 10px);
+    left:50%;
+    width:235px;
+    max-height:70vh;
+    overflow-y:auto;
+    padding:9px;
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:10px;
+    background:#102f37;
+    box-shadow:0 20px 45px rgba(0,0,0,.25);
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+    transform:translate(-50%,8px);
+    transition:.2s;
+}
+
+.submenu-olimpiadas{
+    width:280px;
+}
+
+.submenu-premios{
+    width:270px;
+}
+
+.dropdown.aberto .submenu{
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+    transform:translate(-50%,0);
+}
+
+.submenu a{
+    display:block;
+    padding:11px 13px;
+    border-radius:7px;
+    color:#fff;
+    font-size:13px;
+    line-height:1.35;
+}
+
+.submenu a:hover,
+.submenu .ativo-submenu{
+    background:var(--secondary);
+}
+
+.portal-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:7px;
+    padding:12px 17px;
+    border-radius:9px;
+    background:var(--secondary);
+    color:#fff;
+    font-size:13px;
+    font-weight:700;
+    white-space:nowrap;
+    transition:.22s;
+}
+
+.portal-btn:hover{
+    background:var(--secondary-dark);
+    transform:translateY(-2px);
+}
+
+.menu-mobile{
+    display:none;
+    width:44px;
+    height:44px;
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:8px;
+    background:transparent;
+    color:#fff;
+    font-size:27px;
+    cursor:pointer;
+}
+
+/* HERO */
+
+.conesul-hero{
+    min-height:720px;
+    display:flex;
+    align-items:center;
+    padding:145px 0 85px;
+    background:
+        radial-gradient(circle at 80% 35%,rgba(34,183,177,.22),transparent 32%),
+        linear-gradient(135deg,#102f37 0%,#173c46 55%,#195a61 100%);
+}
+
+.conesul-hero-grid{
+    display:grid;
+    grid-template-columns:1fr .85fr;
+    align-items:center;
+    gap:80px;
+}
+
+.conesul-hero-texto > span,
+.titulo-secao > span,
+.larissa-destaque > span{
+    display:block;
+    margin-bottom:13px;
+    color:#7de1dc;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.conesul-hero-texto h1{
+    max-width:680px;
+    color:#fff;
+    font-family:'Fraunces',serif;
+    font-size:65px;
+    line-height:1.04;
+}
+
+.conesul-hero-texto h1 strong{
+    display:block;
+    color:#7de1dc;
+    font-weight:700;
+}
+
+.conesul-hero-texto p{
+    max-width:590px;
+    margin-top:24px;
+    color:#d8eeec;
+    font-size:18px;
+    line-height:1.75;
+}
+
+.hero-botoes{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+    margin-top:30px;
+}
+
+.btn-principal,
+.btn-secundario{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:15px 20px;
+    font-size:13px;
+    font-weight:700;
+}
+
+.btn-principal{
+    background:var(--secondary);
+    color:#fff;
+}
+
+.btn-principal:hover{
+    background:var(--secondary-dark);
+}
+
+.btn-secundario{
+    border:1px solid rgba(255,255,255,.55);
+    color:#fff;
+}
+
+.btn-secundario:hover{
+    background:#fff;
+    color:var(--primary-dark);
+}
+
+.logo-conesul-area{
+    display:flex;
+    justify-content:center;
+}
+
+.logo-conesul-box{
+    position:relative;
+    width:390px;
+    height:390px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    border:9px solid rgba(255,255,255,.16);
+    border-radius:50%;
+    background:#fff;
+    box-shadow:
+        0 0 0 14px rgba(34,183,177,.13),
+        0 24px 55px rgba(0,0,0,.26);
+}
+
+.logo-conesul-box img{
+    width:100%;
+    height:100%;
+    padding:24px;
+    object-fit:contain;
+}
+
+.logo-placeholder{
+    position:absolute;
+    inset:0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:35px;
+    color:var(--primary);
+    text-align:center;
+}
+
+.logo-placeholder i{
+    color:var(--secondary);
+    font-size:52px;
+}
+
+.logo-placeholder strong{
+    font-family:'Fraunces',serif;
+    font-size:27px;
+}
+
+.logo-placeholder span{
+    color:var(--text-light);
+    font-size:12px;
+}
+
+.logo-conesul-box.tem-imagem .logo-placeholder{
+    display:none;
+}
+
+/* FAIXA DE RESUMO */
+
+.resumo-faixa{
+    border-bottom:1px solid var(--border);
+    background:#fff;
+}
+
+.resumo-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+}
+
+.resumo-grid article{
+    padding:25px 28px;
+    border-right:1px solid var(--border);
+}
+
+.resumo-grid article:last-child{
+    border-right:0;
+}
+
+.resumo-grid span{
+    display:block;
+    margin-bottom:7px;
+    color:var(--secondary-dark);
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+}
+
+.resumo-grid strong{
+    color:var(--primary);
+    font-family:'Fraunces',serif;
+    font-size:18px;
+    line-height:1.35;
+}
+
+/* SOBRE */
+
+.sobre-conesul{
+    padding:95px 0;
+    background:var(--mint);
+}
+
+.sobre-grid{
+    display:grid;
+    grid-template-columns:.85fr 1.15fr;
+    gap:90px;
+}
+
+.titulo-secao{
+    max-width:820px;
+    margin-bottom:45px;
+}
+
+.titulo-secao > span{
+    color:var(--secondary-dark);
+}
+
+.titulo-secao h2{
+    color:var(--primary);
+    font-family:'Fraunces',serif;
+    font-size:48px;
+    line-height:1.12;
+}
+
+.titulo-secao p{
+    margin-top:16px;
+    color:var(--text-light);
+    font-size:16px;
+    line-height:1.75;
+}
+
+.titulo-central{
+    margin-right:auto;
+    margin-left:auto;
+    text-align:center;
+}
+
+.sobre-texto{
+    display:grid;
+    gap:22px;
+}
+
+.sobre-texto p{
+    padding-left:24px;
+    border-left:4px solid var(--secondary);
+    color:#52686c;
+    font-size:16px;
+    line-height:1.9;
+}
+
+/* EDIÇÕES */
+
+.participacao-secao{
+    padding:100px 0;
+    background:#fff;
+}
+
+.edicoes-lista{
+    display:grid;
+    gap:34px;
+}
+
+.edicao-card{
+    display:grid;
+    grid-template-columns:.95fr 1.05fr;
+    min-height:430px;
+    overflow:hidden;
+    border:1px solid var(--border);
+    background:#fff;
+    box-shadow:0 12px 28px rgba(16,47,55,.07);
+}
+
+.edicao-card.edicao-invertida .edicao-imagem{
+    order:2;
+}
+
+.edicao-card.edicao-invertida .edicao-conteudo{
+    order:1;
+}
+
+.edicao-imagem{
+    min-height:430px;
+}
+
+.imagem-box{
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    background:
+        linear-gradient(145deg,#dff7f4,#cceeea);
+}
+
+.imagem-box img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+}
+
+.imagem-aviso{
+    position:absolute;
+    inset:0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:25px;
+    color:var(--primary);
+    text-align:center;
+}
+
+.imagem-aviso i{
+    color:var(--secondary);
+    font-size:42px;
+}
+
+.imagem-aviso strong{
+    font-family:'Fraunces',serif;
+    font-size:22px;
+}
+
+.imagem-aviso span{
+    color:var(--text-light);
+    font-size:12px;
+}
+
+.imagem-box.tem-imagem .imagem-aviso{
+    display:none;
+}
+
+.edicao-conteudo{
+    padding:42px;
+}
+
+.edicao-topo{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    margin-bottom:23px;
+    padding-bottom:18px;
+    border-bottom:1px solid var(--border);
+}
+
+.edicao-topo span{
+    color:var(--secondary-dark);
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+}
+
+.edicao-topo strong{
+    color:var(--primary);
+    font-size:13px;
+}
+
+.edicao-conteudo h3{
+    margin-bottom:22px;
+    color:var(--primary);
+    font-family:'Fraunces',serif;
+    font-size:30px;
+}
+
+.medalhas-lista{
+    display:grid;
+    gap:10px;
+}
+
+.medalhas-lista li{
+    display:grid;
+    grid-template-columns:68px 1fr;
+    align-items:center;
+    gap:14px;
+    min-height:66px;
+    padding:11px 13px;
+    border:1px solid var(--border);
+    background:#f9fcfb;
+}
+
+.medalhas-lista li.destaque-menina{
+    border-color:rgba(34,183,177,.5);
+    background:var(--secondary-light);
+}
+
+.medalha{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:58px;
+    height:32px;
+    border-radius:20px;
+    color:#fff;
+    font-size:10px;
+    font-weight:700;
+    text-transform:uppercase;
+}
+
+.medalha.ouro{
+    background:var(--gold);
+}
+
+.medalha.prata{
+    background:var(--silver);
+}
+
+.medalha.bronze{
+    background:var(--bronze);
+}
+
+.medalhas-lista strong{
+    display:block;
+    color:var(--primary);
+    font-size:14px;
+    line-height:1.35;
+}
+
+.medalhas-lista small{
+    display:block;
+    margin-top:4px;
+    color:var(--text-light);
+    font-size:11px;
+}
+
+
+/* FRASE FINAL E FOOTER */
+
+.frase-final{
+    padding:80px 0;
+    background:#eaf7f5;
+    text-align:center;
+}
+
+.frase-final p{
+    max-width:850px;
+    margin:auto;
+    color:var(--primary);
+    font-family:'Fraunces',serif;
+    font-size:38px;
+    line-height:1.35;
+}
+
+.frase-final span{
+    display:block;
+    margin-top:18px;
+    color:var(--secondary-dark);
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.footer{
+    background:#102f37;
+    color:#fff;
+}
+
+.footer-conteudo{
+    display:grid;
+    grid-template-columns:1.5fr .7fr;
+    gap:60px;
+    padding:62px 0 52px;
+}
+
+.footer-logo{
+    display:flex;
+    align-items:center;
+    gap:13px;
+    margin-bottom:20px;
+}
+
+.footer-logo img{
+    width:56px;
+    height:56px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.footer-logo strong,
+.footer-logo span{
+    display:block;
+}
+
+.footer-logo strong{
+    font-family:'Fraunces',serif;
+    font-size:19px;
+}
+
+.footer-logo span{
+    margin-top:4px;
+    color:#7de1dc;
+    font-size:11px;
+    font-weight:700;
+}
+
+.footer-marca > p{
+    max-width:520px;
+    color:#bcd5d3;
+    font-size:14px;
+    line-height:1.7;
+}
+
+.footer-links{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.footer-links h3{
+    margin-bottom:17px;
+    font-size:15px;
+}
+
+.footer-links a{
+    margin-bottom:10px;
+    color:#bcd5d3;
+    font-size:14px;
+}
+
+.footer-links a:hover{
+    color:#7de1dc;
+}
+
+.footer-final{
+    padding:20px 0;
+    border-top:1px solid rgba(255,255,255,.12);
+    color:#8fb0ae;
+    font-size:12px;
+    text-align:center;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:1100px){
+
+    .nav{
+        grid-template-columns:220px minmax(0,1fr) auto;
+        gap:15px;
+    }
+
+    #nav-principal{
+        gap:13px;
+    }
+
+    #nav-principal > a,
+    .dropdown-toggle{
+        font-size:12px;
+    }
+
+    .conesul-hero-grid{
+        gap:45px;
+    }
+
+    .logo-conesul-box{
+        width:330px;
+        height:330px;
+    }
+
+    .edicao-conteudo{
+        padding:34px;
+    }
+}
+
+@media(max-width:900px){
+
+    .nav{
+        display:flex;
+        justify-content:space-between;
+    }
+
+    .portal-btn{
+        display:none;
+    }
+
+    .menu-mobile{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+
+    #nav-principal{
+        position:absolute;
+        top:82px;
+        left:5%;
+        right:5%;
+        display:none;
+        flex-direction:column;
+        align-items:stretch;
+        gap:3px;
+        max-height:calc(100vh - 100px);
+        overflow-y:auto;
+        padding:14px;
+        border-radius:12px;
+        background:#102f37;
+        box-shadow:0 22px 45px rgba(0,0,0,.3);
+    }
+
+    #nav-principal.aberto{
+        display:flex;
+    }
+
+    #nav-principal > a,
+    .dropdown-toggle{
+        width:100%;
+        justify-content:space-between;
+        padding:13px 12px;
+        border-radius:7px;
+        font-size:14px;
+    }
+
+    #nav-principal > a::after,
+    .dropdown-toggle::after{
+        display:none;
+    }
+
+    .dropdown{
+        width:100%;
+    }
+
+    .submenu,
+    .submenu-olimpiadas,
+    .submenu-premios{
+        position:static;
+        display:none;
+        width:100%;
+        max-height:none;
+        margin:2px 0 8px;
+        padding:7px;
+        border:0;
+        background:#173c46;
+        box-shadow:none;
+        opacity:1;
+        visibility:visible;
+        pointer-events:auto;
+        transform:none;
+    }
+
+    .dropdown.aberto .submenu{
+        display:block;
+    }
+
+    .conesul-hero{
+        min-height:auto;
+        padding:135px 0 70px;
+    }
+
+    .conesul-hero-grid{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .conesul-hero-texto p{
+        margin-right:auto;
+        margin-left:auto;
+    }
+
+    .hero-botoes{
+        justify-content:center;
+    }
+
+    .resumo-grid{
+        grid-template-columns:1fr;
+    }
+
+    .resumo-grid article{
+        border-right:0;
+        border-bottom:1px solid var(--border);
+    }
+
+    .resumo-grid article:last-child{
+        border-bottom:0;
+    }
+
+    .sobre-grid{
+        grid-template-columns:1fr;
+        gap:35px;
+    }
+
+    .edicao-card{
+        grid-template-columns:1fr;
+    }
+
+    .edicao-card.edicao-invertida .edicao-imagem,
+    .edicao-card.edicao-invertida .edicao-conteudo{
+        order:initial;
+    }
+
+    .edicao-imagem{
+        min-height:390px;
+    }
+
+    .larissa-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:650px){
+
+    .logo-text strong{
+        font-size:13px;
+    }
+
+    .logo-text span{
+        font-size:14px;
+    }
+
+    .conesul-hero-texto h1{
+        font-size:46px;
+    }
+
+    .conesul-hero-texto p{
+        font-size:16px;
+    }
+
+    .hero-botoes{
+        flex-direction:column;
+    }
+
+    .btn-principal,
+    .btn-secundario{
+        width:100%;
+    }
+
+    .logo-conesul-box{
+        width:260px;
+        height:260px;
+    }
+
+    .sobre-conesul,
+    .participacao-secao,
+    .larissa-secao{
+        padding:65px 0;
+    }
+
+    .titulo-secao h2,
+    .larissa-destaque h2{
+        font-size:36px;
+    }
+
+    .edicao-imagem{
+        min-height:300px;
+    }
+
+    .edicao-conteudo{
+        padding:26px 20px;
+    }
+
+    .edicao-topo{
+        align-items:flex-start;
+        flex-direction:column;
+        gap:7px;
+    }
+
+    .medalhas-lista li{
+        grid-template-columns:62px 1fr;
+    }
+
+    .larissa-resultados{
+        grid-template-columns:1fr;
+    }
+
+    .larissa-resultados article{
+        min-height:130px;
+        border-right:0;
+        border-bottom:1px solid var(--border);
+    }
+
+    .larissa-resultados article:last-child{
+        border-bottom:0;
+    }
+
+    .frase-final p{
+        font-size:28px;
+    }
+
+    .footer-conteudo{
+        grid-template-columns:1fr;
+    }
+}
+.larissa-grid{
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    align-items:center;
+    gap:70px;
+}
+
+.larissa-medalhas{
+    display:grid;
+    gap:10px;
+    margin-top:28px;
+}
+
+.larissa-medalhas p{
+    padding:13px 16px;
+    border-left:4px solid #fff;
+    background:rgba(255,255,255,.13);
+    color:#fff;
+    font-size:14px;
+    line-height:1.5;
+}
+
+.larissa-medalhas strong{
+    color:#fff;
+}
+
+.larissa-foto{
+    width:100%;
+    height:430px;
+    overflow:hidden;
+    border:8px solid rgba(255,255,255,.18);
+    background:#fff;
+    box-shadow:0 20px 45px rgba(16,47,55,.25);
+}
+
+.larissa-foto img{
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    object-position:center;
+    background:#fff;
+}
+
+@media(max-width:900px){
+    .larissa-grid{
+        grid-template-columns:1fr;
+    }
+
+    .larissa-foto{
+        height:auto;
+        max-height:none;
+    }
+
+    .larissa-foto img{
+        height:auto;
+    }
+}
+/* SEÇÃO DA LARISSA — FOTO ÚNICA */
+
+.larissa-secao-unica{
+    width:100%;
+    padding:90px 0;
+    background:
+        linear-gradient(
+            120deg,
+            #128f8b 0%,
+            #19aaa5 55%,
+            #24bbb5 100%
+        );
+}
+
+.larissa-conteudo-unico{
+    display:grid;
+    grid-template-columns:1fr 460px;
+    align-items:center;
+    gap:70px;
+}
+
+.larissa-texto-unico > span{
+    display:block;
+    margin-bottom:14px;
+    color:#d8fffc;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.larissa-texto-unico h2{
+    max-width:600px;
+    color:#fff;
+    font-family:'Fraunces',serif;
+    font-size:47px;
+    line-height:1.12;
+}
+
+.larissa-texto-unico > p{
+    max-width:580px;
+    margin-top:20px;
+    color:#e6fffd;
+    font-size:16px;
+    line-height:1.75;
+}
+
+.larissa-medalhas-unicas{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    margin-top:32px;
+    border:1px solid rgba(255,255,255,.35);
+    background:rgba(8,76,76,.18);
+}
+
+.larissa-medalhas-unicas article{
+    min-height:125px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:20px;
+    border-right:1px solid rgba(255,255,255,.35);
+}
+
+.larissa-medalhas-unicas article:last-child{
+    border-right:0;
+}
+
+.larissa-medalhas-unicas strong{
+    color:#fff;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+.larissa-medalhas-unicas span{
+    margin-top:9px;
+    color:#fff;
+    font-family:'Fraunces',serif;
+    font-size:18px;
+    font-weight:600;
+}
+
+.larissa-medalhas-unicas small{
+    margin-top:6px;
+    color:#d9fffc;
+    font-size:12px;
+}
+
+.larissa-foto-unica{
+    width:100%;
+    height:430px;
+    overflow:hidden;
+    border:8px solid rgba(255,255,255,.22);
+    background:#dff7f4;
+    box-shadow:0 20px 50px rgba(8,67,68,.28);
+}
+
+.larissa-foto-unica img{
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center top;
+}
+
+/* TABLET */
+
+@media(max-width:900px){
+    .larissa-conteudo-unico{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .larissa-foto-unica{
+        width:min(520px,100%);
+        height:480px;
+        margin:0 auto;
+    }
+}
+
+/* CELULAR */
+
+@media(max-width:650px){
+    .larissa-secao-unica{
+        padding:65px 0;
+    }
+
+    .larissa-texto-unico h2{
+        font-size:35px;
+    }
+
+    .larissa-medalhas-unicas{
+        grid-template-columns:1fr;
+    }
+
+    .larissa-medalhas-unicas article{
+        min-height:auto;
+        border-right:0;
+        border-bottom:1px solid rgba(255,255,255,.35);
+    }
+
+    .larissa-medalhas-unicas article:last-child{
+        border-bottom:0;
+    }
+
+    .larissa-foto-unica{
+        height:360px;
+    }
+}

@@ -1,0 +1,270 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biografia | Movimento Meninas Olímpicas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="biografia.css">
+    <link rel="stylesheet" href="navegacao.css">
+</head>
+<body>
+
+<header class="site-header nav-unificada" id="header">
+    <div class="container nav nav-unificada-container">
+        <a href="index.html" class="logo nav-logo" aria-label="Página inicial">
+            <img src="logo.jpg" alt="Logo do Movimento Meninas Olímpicas">
+            <div class="logo-text">
+                <strong>MOVIMENTO</strong>
+                <span>MENINAS OLÍMPICAS</span>
+            </div>
+        </a>
+
+        <nav id="nav-principal" class="nav-unificada-menu" aria-label="Navegação principal">
+            <a href="index.html" data-page="index">Início</a>
+
+            <div class="dropdown nav-dropdown">
+                <button class="dropdown-toggle nav-dropdown-toggle ativo" type="button" aria-expanded="false">
+                    Quem somos
+                    <i class="ri-arrow-down-s-line"></i>
+                </button>
+                <div class="submenu nav-submenu">
+                    <a href="quem-somos.html" data-page="quem-somos">Equipe</a>
+                    <a href="biografia.html" data-page="biografia" class="ativo">Biografia</a>
+                    <a href="observatorio.html" data-page="observatorio">Observatório</a>
+                    
+                </div>
+            </div>
+
+            <div class="dropdown nav-dropdown">
+                <button class="dropdown-toggle nav-dropdown-toggle" type="button" aria-expanded="false">
+                    Olimpíadas
+                    <i class="ri-arrow-down-s-line"></i>
+                </button>
+                <div class="submenu submenu-olimpiadas nav-submenu">
+                    <a href="olimpiadas.html" data-page="olimpiadas">Página de Olimpíadas</a>
+                    <a href="olimpiadas.html#femininas">Olimpíadas femininas</a>
+                    <a href="olimpiadas.html#seletivas">Seletivas</a>
+                    <a href="olimpiadas.html#universalizadas">Universalizadas</a>
+                    <a href="olimpiadas.html#matematica">Matemática e Economia</a>
+                    <a href="olimpiadas.html#computacao">Computação e Tecnologia</a>
+                    <a href="olimpiadas.html#ciencias">Ciências da Natureza</a>
+                    <a href="olimpiadas.html#humanas">Humanas e Sociais</a>
+                </div>
+            </div>
+
+           <div class="dropdown nav-dropdown">
+    <button class="dropdown-toggle nav-dropdown-toggle" type="button" aria-expanded="false">
+        Trajetória
+        <i class="ri-arrow-down-s-line"></i>
+    </button>
+
+    <div class="submenu submenu-largo nav-submenu">
+        <a href="acoes.html">Trajetória</a>
+        <a href="homenagens.html">Homenagens</a>
+        <a href="premio-jovem-talento.html">Prêmio Jovem Talento</a>
+        <a href="premio-legislativo.html">Prêmio Legislativo</a>
+    </div>
+</div>
+            <a href="premios.html">Prêmios</a>
+            <a href="index.html#contato">Contato</a>
+        </nav>
+
+        <a href="https://olimpiadas.ufsm.br/" class="portal-btn" target="_blank">
+    Portal Olímpico
+</a>
+
+        <button class="menu-mobile nav-menu-mobile" type="button" aria-label="Abrir menu" aria-controls="nav-principal" aria-expanded="false">
+            <i class="ri-menu-line"></i>
+        </button>
+    </div>
+</header>
+
+<main>
+    <section class="bio-hero">
+        <div class="container bio-hero-grid">
+            <div class="bio-hero-texto">
+                <span>Biografia acadêmica · 2016–2025</span>
+                <h1>Profa. Dra.<br>Nara Bigolin</h1>
+                <p>Coordenadora do Movimento Meninas Olímpicas, professora titular em Computação na UFSM, pesquisadora e doutora em Inteligência Artificial.</p>
+
+                <div class="bio-hero-botoes">
+                    <a href="#breve-descricao" class="botao-principal">Ler biografia</a>
+                    <a href="https://lattes.cnpq.br/" class="botao-contorno" target="_blank" rel="noopener noreferrer">
+                        Currículo Lattes
+                        <i class="ri-arrow-right-up-line"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bio-hero-foto">
+                <img src="nara.jpg" alt="Profa. Dra. Nara Bigolin" onerror="this.onerror=null; this.src='equipe/sem-foto.jpg';">
+                <div class="foto-legenda">
+                    <strong>Nara Martini Bigolin</strong>
+                    <span>UFSM · Movimento Meninas Olímpicas</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bio-indice">
+        <div class="container">
+            <nav class="indice-links" aria-label="Seções da biografia">
+                <a href="#breve-descricao">Breve descrição</a>
+                <a href="#premiacoes">Premiações</a>
+                <a href="#frases">Frases</a>
+                <a href="#biografia-resumida">Biografia resumida</a>
+                <a href="#descricao-estendida">Descrição estendida</a>
+                <a href="#producao-numeros">Produção acadêmica</a>
+            </nav>
+        </div>
+    </section>
+
+    
+    <section class="bio-secao " id="breve-descricao">
+        <div class="container bio-layout">
+            <div class="bio-cabecalho">
+                <span>01</span>
+                <h2>Breve descrição</h2>
+            </div>
+            <div class="bio-conteudo">
+                <p>Cientista da Computação, PhD em IA, Filósofa, Palestrante, Membro da Ordem Nacional do Mérito Educativo e Professora Titular em Computação na Universidade Federal de Santa Maria - UFSM. Mãe de 3 filhas (1991-in memoriam, 2001,2004) e 1 filho (2006). Doutorado em Inteligência Artificial (1995-1999, Sorbonne Université - Pierre et Marie Curie) , Mestrado em Ciência da Computação (1992-1994, UFRGS) possui Graduação em Informática (1988-1992, PUC/RS) e Graduação em Filosofia (2020-2022, Universidade Paulista), e atualmente é Graduanda em Jornalismo (2024-UFSM).</p><p>Atua como Docente e Pesquisadora (1993-atual) há mais de 3 décadas em várias Universidades da França e do Brasil com mais de 100 publicações, além de orientações em trabalhos de graduação e pós-graduação e em funções administrativas como coordenação de curso e presidências em diversas comissões. Desde 1989, atua em dezenas de projetos de pesquisa, ensino e extensão na área do Computação na Educação Básica, Inteligência Artificial e na temática sobre a desigualdade de gênero nas Olimpíadas Científicas nas Áreas de Exatas e nos espaços de poder.  Desde 2016, têm realizado inúmeras palestras nos temas sobre a implantação e ensino da Computação na Educação Básica e a desigualdade de gênero em olimpíadas científicas e em espaços de poder.</p><p>É fundadora e coordenadora do Movimento Meninas Olímpicas do Brasil, fundadora e coordenadora geral do Torneio Feminino de Computação (desde 2020), fundadora e coordenadora adjunta do Torneio de Física para Meninas (desde 2023), compõe a comissão da Olímpiada Feminina de Matemática do Estado da Bahia - OFMEBA (desde 2021) e comissão da Olímpiada Nacional de Filosofia (desde 2024). Junto a Sociedade Brasileira de Computação (SBC) foi membro da Comissão da Educação Básica da SBC (2016-2023) que elaborou as Normas sobre Computação na Educação Básica hoje em implantação . Foi Conselheira suplente da SBC (2019-2021).</p>
+            </div>
+        </div>
+    </section>
+    
+
+    
+    <section class="bio-secao secao-cinza" id="premiacoes">
+        <div class="container bio-layout">
+            <div class="bio-cabecalho">
+                <span>02</span>
+                <h2>Premiações e homenagens</h2>
+            </div>
+            <div class="bio-conteudo">
+                <p>Devido ao seu protagonismo na implantação da Computação na Educação Básica do Brasil e na criação do movimento nacional visando a participação igualitária das mulheres em espaço de poder através da igualdade das meninas em olimpíadas na área de Exatas (2015-atual) foi condecorada com vários prêmios:</p><p>Em 2018 foi condecorada com a 🏆 1- Medalha da Ordem Nacional do Mérito Educativo indicada pelo Ministro da Educação recebendo a Medalha da Ordem. Foi eleita a 🏆 2- Mulher Cidadã 2018 do RS na Modalidade Educação pela Assembleia Legislativa do RS e recebeu 🏆3- Homenagem  na Olimpíada Internacional de Matemática, principal olimpíada do mundo, a IMO 2018, ocorrida na Romênia, pela sua contribuição no incentivo às meninas nas olimpíadas científicas. Em 2018, recebeu também 🏆4- Homenagem da Procuradoria Especial da Mulher da Assembleia Legislativa do RS, pelo protagonismo na Educação Básica e pelo incentivo às meninas na área de Exatas, assim como foi finalista dois anos consecutivos do 🏆5- Prêmio Educação do SINPRORS.</p><p>Em 2019 foi indica a 🏆Medalha Mietta Santiago da Câmara dos Deputados, a qual visa valorizar iniciativas relacionadas aos direitos das mulheres.</p><p>Em 2021 foi 🏆líder da equipe brasileira que representou o Brasil na EGOI 2021 - Olimpíada Europeia de Informática para Garotas, a qual conquistou ouro.</p><p>Em 2024 foi agraciada com o três Prêmios:🏆 1- Prêmio Mulheres na Ciência Amélia Império Hamburger, concedido pela Câmara dos Deputados que é o reconhecimento da excelência da participação feminina na solução dos grandes desafios da humanidade e um estímulo à capacitação de mais mulheres cientistas; 🏆2- Prêmio Mulher Transformadora, concedido pela Prefeitura de Frederico Westphalen e 🏆3- Prêmio Ana Primavesi concedido Grupo Diário de Santa Maria que é um reconhecimento à mulheres cientistas que mudam a vida da sociedade.</p><p>Em 2025 foi agraciada com o 🏆 Troféu Educar para Inovar referente a proposição do Prêmio Jovem Talento Científico Gaúcho e a parceria com a Secretaria de Inovação, Ciência e Tecnologia.</p>
+            </div>
+        </div>
+    </section>
+    
+
+    
+    <section class="bio-secao secao-verde" id="frases">
+        <div class="container bio-layout">
+            <div class="bio-cabecalho">
+                <span>03</span>
+                <h2>Frases elaboradas</h2>
+            </div>
+            <div class="bio-conteudo">
+                <p>Ao longo de minha trajetória pessoal e profissional, algumas  expressões se tornam minhas verdades.</p><blockquote>A presença feminina é inversamente proporcional ao prestígio das olimpíadas ou  dos espaços de poder e decisão. Pois foi constatado através de uma pesquisa que o percentual de meninas premiadas em olimpíadas científicas equivale às mulheres em espaço de poder, ou seja, se não houver meninas nas olimpíadas hoje não haverá mulheres nos espaços do poder amanhã, pois  as meninas não tem acesso ao desenvolvimento da habilidade necessária para ocupar os espaços de poder e de decisão.</blockquote><blockquote>Uma ação compensatória/afirmativa nunca é nula, deveria ser construtiva mas conduzida erroneamente  será destrutiva. Muitas atividades para resolver a desigualdade de gênero podem ter efeitos negativos se as ações forem bem conduzidas de maneira equivocada.</blockquote><blockquote>Não se nasce gênio, se torna um com muita dedicação, apoio familiar e resiliência, pois atrás de um talento acadêmico existe uma família comprometida com a Educação.  Através do convívio com os pais dos maiores talentos do Brasil, percebemos que as famílias tinham um padrão.</blockquote><blockquote>Nossa importância é proporcional ao conhecimento ou cuidado que compartilhamos.</blockquote>
+            </div>
+        </div>
+    </section>
+    
+
+    
+    <section class="bio-secao " id="biografia-resumida">
+        <div class="container bio-layout">
+            <div class="bio-cabecalho">
+                <span>04</span>
+                <h2>Biografia resumida</h2>
+            </div>
+            <div class="bio-conteudo">
+                <p>Nara Bigolin é bastante conhecida no meio acadêmico e científico brasileiro, especialmente por seu trabalho pioneiro em Inteligência Artificial, Computação e luta pela igualdade de gênero nas ciências exatas, sendo professora da UFSM, doutora em IA pela Sorbonne e coordenadora do projeto Meninas Olímpicas. Ela é reconhecida por sua trajetória inspiradora, que inclui superar a dislexia, e por prêmios como o Mulheres na Ciência Amélia Império Hamburger em 2024.</p><h3 class="subtitulo-interno">Quem é Nara Bigolin?</h3><p><strong>Profissão:</strong> Filósofa, pesquisadora, professora universitária (UFSM) e especialista em Inteligência Artificial.</p><p><strong>Formação:</strong> Doutorado em Inteligência Artificial pela Sorbonne (França), Mestrado em Ciência da Computação e graduação em Filosofia, além de áreas técnicas.</p><p><strong>Foco de Atuação:</strong> Inclusão de meninas e mulheres em olimpíadas de conhecimento e na computação, combatendo a desigualdade de gênero nas áreas STEM (Ciência, Tecnologia, Engenharia e Matemática).</p><p><strong>Projetos:</strong> Coordena o Movimento Meninas Olímpicas, Torneio Feminino de Computação e Torneio de Física para Meninas.</p><p><strong>Reconhecimento:</strong> Recebeu o Prêmio Mulheres na Ciência Amélia Império Hamburger (2024), o 1º Prêmio Ana Primavesi (2024) e a Medalha da Ordem Nacional do Mérito Educativo (2018), entre outros.</p><h3 class="subtitulo-interno">Por que ela é conhecida?</h3><p>Ela se destaca por sua jornada pessoal, por sua dedicação à educação e por ser uma voz ativa na promoção da participação feminina na tecnologia e ciência, inspirando novas gerações.</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="bio-secao secao-azul" id="descricao-estendida">
+        <div class="container">
+            <div class="bio-cabecalho bio-cabecalho-claro">
+                <span>05</span>
+                <h2>Descrição estendida</h2>
+            </div>
+
+            <div class="linha-tempo-biografica">
+                <article><span>01</span><div><p>Alguns marcos pretéritos da minha trajetória de vida, que fazem parte dos pilares de sustentação que me guiaram até o presente.</p></div></article><article><span>02</span><div><p>🔷Juventude: Sou natural da cidade de Três de Maio (RS), nascida em 26/07/1969. Realizei toda a minha formação da Educação Básica neste município. O Ensino Médio realizei no período de 1984-1986 iniciando a formação de Técnico em Enfermagem, num Colégio Interno de Freiras, e concluindo o Ensino Médio na rede estadual, com duas formações técnicas: Técnica em  Administração e Técnica em Análises Química.  Durante o Ensino Médio tive minhas primeiras experiências de pesquisa, onde participei de várias feiras de ciências chegando a 3º lugar nacional.</p></div></article><article><span>03</span><div><p>🔷Formação Superior - A graduação de Bacharelado em Informática foi realizada na PUCRS no período de 1998-1991, onde fui bolsista de Iniciação Científica durante toda a graduação. O Mestrado foi em Ciência da Computação na UFRGS no período de 1992-1994 e o Doutorado em Inteligência Artificial na Universidade Pierre et Marie Curie – Sorbonne Université, na França, no período de 1995-1999.</p></div></article><article><span>04</span><div><p>🔷Experiência tecnológica - No decorrer dos anos presenciei a evolução do mundo da Tecnologia e da Computação. Nasci sem energia elétrica, conheci computador e ar-condicionado aos 17 anos, acessei a internet pela primeira vez aos 22 anos durante o mestrado e uma porta se abriu automática com um cartão aos 25 anos, durante o doutorado. Todas as tecnologias ultrapassadas atualmente. Presenciei a instalação de energia elétrica, televisão à bateria, o uso de máquina de escrever e de fotocópia que borrava todo o documento, transparência datilografadas, retroprojetores, os primeiros computadores do tipo PCs 286 (Personal Computers), impressora matricial, disquetes 5 1/4, internet discada, enfim, essas raridades que a maioria dos acadêmicos desconhece. Atualmente, estamos lidando com internet banda larga, notebook, smartfones, lousa interativa digital, Moodle, Google Meet, documentos digitais, aulas virtuais e Inteligência Artificial Generativa. Enfim, tive o privilégio de viver 300 anos em 30.</p></div></article><article><span>05</span><div><p>🔷Pessoal - Meus filhos nasceram de 2001 a 2006. Mariana nasceu em 2001, Natalia nasceu em 2004 e Lucas nasceu m 2006. No período de 2001 a 2016, meu tempo foi destinado quase que integralmente à maternidade, visto que eu era a principal responsável pelas atividades vinculadas aos  filhos e às atividades familiares.</p></div></article><article><span>06</span><div><p>🔷Ensino: Docência - Comecei minha vida docente na ULBRA em 1993, há mais de 3 décadas, com a disciplina de Lógica de Programação (Pensamento Computacional), a qual ministro até hoje. Nestas 3 décadas fui docente em várias universidades privadas e públicas, do Brasil e da França, residindo em Paris de 1994 a 2000, durante meu doutorado. Neste período estudei nas universidades Paris 1- Panthéon Sorbonne e na Paris VI  – Pierre et Marie Curie, atual Sorbonne Université (3ª França, 63º mundial). Fui docente nas universidades: como  horista na Université Paris VIII- Vincennes-Saint-Denis e como concursada (ATER) na  Université Cergy-Pontoise e na Université Paris-Est Créteil Val de Marne. De retorno ao Brasil, em 2000, fui recém-doutor na UFRGS de 2000 a 2003, e depois retornei à ULBRA, até 2007. Concurso público - Em 2007, ingressei, via concurso público, na UERGS, e em 2009 ingressei, via concurso público, na Universidade Federal de Santa Maria (UFSM). Em 05 de setembro de 2010, assumi como Coordenadora Substituta do Curso de Sistemas de Informação, e em 16 de fevereiro de 2011, assumi a função de Coordenadora Pró-Tempore do Curso de Sistemas de Informação, onde atuei por 4 anos na implantação e consolidação do Curso de Sistemas de Informação no campus de Frederico Westphalen – UFSM-FW.</p></div></article><article><span>07</span><div><p>🔷Pesquisa - Como pesquisadora ao longo da carreira, atuei em várias Universidades da França e do Brasil, produzindo mais de 100 publicações e mais de 50 orientações em trabalhos de graduação e pós-graduação. Atuei em dezenas de projetos de Pesquisa, Ensino e Extensão na área de Computação na Educação Básica, Inteligência Artificial e na temática sobre a desigualdade de gênero em Olimpíadas Científicas e em espaços de poder, sendo o principal o Movimento Meninas Olímpicas, onde tem um grupo de meninas talentosas voluntárias que nos auxiliam. O Movimento Meninas Olímpicas está completando 10 anos de existência em julho desse ano.</p></div></article><article><span>08</span><div><p>🔷Extensão: Computação na Educação Básica -  Em 2013, coloquei estudantes do 7º ano do Ensino fundamental II nas disciplinas de Programação e Estrutura de Dados e percebi que os estudantes de 12 anos aprendiam com mais facilidade a lógica computacional, ou seja, com mais  capacidade de resolver problemas de maneira estruturada do que os graduandos de Computação. Assim, nasceu a ideia de colocar Computação como disciplina obrigatória na Educação Básica, principalmente no Ensino Fundamental II. Nesse contexto, procurei a Sociedade Brasileira de Computação para criarmos uma  Comissão de Computação na Educação Básica, da qual eu integrei, desde sua criação, em 2016, até 2023. Nessa comissão definimos os conteúdos a serem colocados nas Normas. Em 2022, o Conselho Nacional de Educação aprovou por unanimidade as  “Normas sobre Computação na Educação Básica – Complemento à BNCC, e, em 2024, a Computação passou a ser obrigatória como disciplina na Educação Básica. Eu também fui Conselheira Suplente no período  2019-2021 da SBC.</p></div></article><article><span>09</span><div><p>🔷Extensão: Olimpíadas Científicas - Em 2016, fui convidada a ser professora nas semanas olímpicas da Olimpíada Brasileira de Informática e da Olimpíada Brasileira de Matemática, onde constatei que as meninas eram menos de 5% das premiadas e presentes na Semana Olímpica, e não existiam professoras mulheres ministrando aula nessas Semanas Olímpicas. Devido a isso, em julho de 2016, fundamos, eu e minhas duas filhas olímpicas Mariana e Natalia, o Movimento Meninas Olímpicas do Brasil, da qual ainda sou a coordenadora geral.  Em 2020, criei o Torneio Feminino de Computação (TFC). O TFC é uma competição nacional brasileira de programação apenas para meninas, que visa incentivar a participação feminina na modalidade de Programação da Olimpíada Brasileira de Informática. O torneio foi inspirado na EGOI - Olimpíada Europeia de Informática para Garotas, que teve sua 1ª edição em junho de 2021, em Zurique na Suíça.  O torneio teve a 1ª edição em 2020. Em 2023, em parceria com a Profa. Maria Luiza Miguez,. criamos o TFM -  Torneio de Física para Meninas. O TFM visa incentivar a participação feminina em olimpíadas científicas, com foco na Física, para aumentar a representatividade feminina em competições nacionais e internacionais. Além de criar um espaço de olimpíada em que as estudantes brasileiras possam competir e ser premiadas de forma igualitária, desenvolvendo a confiança em seus potenciais para as demais olimpíadas, testes de seleção e desafios estudantis e, por fim, descobrir jovens meninas com talento em física. Sou apoiadora também do Quimeninas – Olimpíada Nacional de Química para Meninas.  Sou  ainda a Coordenadora Adjunta da ONDA - Olimpíada Nacional de Aplicativos  e da Comissão de Organização da Onfil - Olimpíada Nacional de Filosofia.</p></div></article><article><span>10</span><div><p>🔷Habilidade do Futuro: resolver problemas de maneira estruturada e rápida  é a principal habilidade do século XXI. Entretanto,  as meninas são em torno de 10% das participantes das atividades que permitem adquirir essa habilidade, pois elas são apenas 17% das ingressantes nos cursos de Computação e em torno de 10% das premiadas nas olimpíadas mais competitivas que abrem oportunidades. Outra área que instiga o raciocínio é a Filosofia, onde as mulheres são apenas 27% das pesquisadoras nessa área.</p></div></article><article><span>11</span><div><p>🔷Pioneirismo e Homenagens: Devido ao pioneirismo em abrir oportunidades as meninas  nas olimpíadas de conhecimento e na incorporação da Ciência da Computação no currículo da Educação Básica pública no Brasil fui honrada com diversos prêmios a nível Municipal, Estadual, Nacional e Internacional.</p></div></article><article><span>12</span><div><p>🔷Premiações recebidas:</p></div></article><article><span>13</span><div><p>🎖️Em 2018 fui honrada com as seguintes premiações:</p></div></article><article><span>14</span><div><p>🏆1. Recebi a medalha da Ordem Nacional do Mérito Educativo indicada pelo Ministro da Educação recebendo a Medalha da Ordem devido as atividades no Movimento Meninas Olímpicas e ao protagonismo da inserção da Computação na Educação Básica (Nacional).</p></div></article><article><span>15</span><div><p>🏆 2. Fui eleita a Mulher Cidadã 2018 do RS, na Modalidade Educação, pela Assembleia Legislativa do RS. Devido a criação do Prêmio Meninas Olímpicas e ao incentivo às meninas em  olimpíadas científicas (Estadual).</p></div></article><article><span>16</span><div><p>🏆 3.  Recebi uma homenagem na principal Olimpíada Internacional de Matemática do mundo, a IMO 2018,  na sua 60ª edição, ocorrida na Romênia, onde já tinha ocorrido a 1ª edição (Internacional).</p></div></article><article><span>17</span><div><p>🏆 4. Fui homenageada pela Procuradoria Especial da Mulher, da Assembleia Legislativa do RS, pelo protagonismo na Educação Básica e pelo incentivo das meninas em olimpíadas na área de Exatas</p></div></article><article><span>18</span><div><p>🏆 5.  Fui finalista, dois anos consecutivos, 2018 e 2019, do prêmio Educação do SINPRORS (Estadual).</p></div></article><article><span>19</span><div><p>🎖️Em 2019, fui indica a Medalha Mietta Santiago da Câmara dos Deputados, a qual visa valorizar iniciativas relacionadas aos direitos das mulheres (Nacional).</p></div></article><article><span>20</span><div><p>🎖️Em 2021, fui líder da equipe brasileira que representou o Brasil na EGOI 2021, a qual conquistou a 1ª Medalha de Ouro para o Brasil. Em 2021, o melhor desempenho mundial feminino na Olimpíada Internacional de Informática foi de uma brasileira, hoje estudante do MIT (Internacional).</p></div></article><article><span>21</span><div><p>🎖️Em 2022, em março foi entregue a 1ª edição do Prêmio Meninas Olímpicas na Assembleia Legislativa do RS e do Espírito Santo, Prêmio esse, proposto por mim e aprovado por projeto de lei nas Assembleias Legislativas do Brasil (Estadual).</p></div></article><article><span>22</span><div><p>🎖️Em 2024, fui agraciada com o cinco prêmios:</p></div></article><article><span>23</span><div><p>🏆 1. Prêmio Mulheres na Ciência Amélia Império Hamburger, concedido pela Câmara dos Deputados a 3 mulheres, uma de cada área,  que é o reconhecimento da excelência da participação feminina na solução dos grandes desafios da humanidade e um estímulo à capacitação de mais mulheres cientistas (Nacional);</p></div></article><article><span>24</span><div><p>🏆2- Prêmio Cidadã Transformadora, concedido pela Prefeitura de Frederico Westphalen (Municipal);</p></div></article><article><span>25</span><div><p>🏆3- Prêmio Ana Primavesi, concedido Grupo Diário de Santa Maria, que é um reconhecimento à mulheres cientistas que mudam a vida da sociedade (Regional);</p></div></article><article><span>26</span><div><p>🏆 4- Embaixadora na Olimpíada Nacional de Astronomia Digital (ONAD) 2024 e na Olimpíada Nacional de Inteligência Artificial (ONIA) 2024, devido a minha atuação no Movimento Meninas Olímpicas e seus impactos sociais (Nacional) ;</p></div></article><article><span>27</span><div><p>🎖️Em 2025, fui agraciada com o Troféu Educar para Inovar referente a proposição do Prêmio Jovem Talento Científico Gaúcho e a parceria com a Secretaria de Inovação, Ciência e Tecnologia.</p></div></article>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="bio-secao secao-cinza" id="producao-numeros">
+        <div class="container bio-layout">
+            <div class="bio-cabecalho">
+                <span>06</span>
+                <h2>Produção acadêmica em números</h2>
+            </div>
+            <div class="bio-conteudo">
+                
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="bio-fechamento">
+        <div class="container">
+            <p>“Nossa importância é proporcional ao conhecimento ou cuidado que compartilhamos.”</p>
+            <span>Profa. Dra. Nara Bigolin</span>
+        </div>
+    </section>
+</main>
+
+<footer class="footer" id="contato">
+    <div class="container footer-conteudo">
+        <div class="footer-marca">
+            <div class="footer-logo">
+                <img src="logo.jpg" alt="Logo do Movimento Meninas Olímpicas">
+                <div>
+                    <strong>Movimento Meninas Olímpicas</strong>
+                    <span>Desde 2016</span>
+                </div>
+            </div>
+            <p>Meninas olímpicas de hoje serão as mulheres nos espaços de decisão do amanhã.</p>
+            <p>Desde 2016 incentivando as meninas olímpicas.</p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Navegação</h3>
+            <a href="index.html">Início</a>
+            <a href="quem-somos.html">Quem somos</a>
+            <a href="#breve-descricao">Biografia</a>
+            <a href="#premiacoes">Premiações</a>
+        </div>
+
+        <div class="footer-redes">
+            <h3>Redes sociais</h3>
+            <div>
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-final">
+        <div class="container">© 2026 Movimento Meninas Olímpicas. Todos os direitos reservados.</div>
+    </div>
+</footer>
+
+<script>
+const menuButton = document.querySelector(".menu-mobile");
+const nav = document.querySelector("#nav-principal");
+
+menuButton.addEventListener("click", () => {
+    const aberto = nav.classList.toggle("aberto");
+    menuButton.setAttribute("aria-expanded", String(aberto));
+    menuButton.querySelector("i").className = aberto ? "ri-close-line" : "ri-menu-line";
+});
+</script>
+
+    <script src="navegacao.js" defer></script>
+</body>
+</html>

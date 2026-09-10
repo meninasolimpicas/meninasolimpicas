@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root{
+    --primary:#1f2a44;
+    --primary-dark:#132039;
+    --secondary:#16a5a3;
+    --secondary-hover:#0e8f8d;
+    --background:#f5f7fa;
+    --white:#fff;
+    --text:#1c2540;
+    --text-light:#667085;
+    --border:#dce2e8;
+    --shadow:0 14px 35px rgba(18,32,57,.12);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--background);color:var(--text);overflow-x:hidden}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+button{font:inherit}
+.container{width:min(1180px,90%);margin:0 auto}
+
+.site-header{
+    position:absolute;
+    inset:0 0 auto;
+    z-index:1000;
+    padding:18px 0;
+}
+.nav{
+    display:grid;
+    grid-template-columns:270px 1fr auto;
+    align-items:center;
+    gap:28px;
+}
+.logo{display:flex;align-items:center;gap:13px}
+.logo img{width:56px;height:56px;border-radius:50%;object-fit:cover}
+.logo-text{display:flex;flex-direction:column;color:#fff;font-family:'Fraunces',serif;line-height:1.05}
+.logo-text strong{font-size:17px}
+.logo-text span{font-size:18px;font-weight:700}
+nav{display:flex;align-items:center;justify-content:center;gap:24px}
+nav a{position:relative;color:#fff;font-size:13px;font-weight:600;white-space:nowrap}
+nav a::after{content:"";position:absolute;left:0;bottom:-7px;width:0;height:2px;background:var(--secondary);transition:.25s}
+nav a:hover::after,nav a.ativo::after{width:100%}
+.portal-btn{display:inline-flex;align-items:center;gap:7px;padding:13px 17px;border-radius:10px;background:var(--secondary);color:#fff;font-size:13px;font-weight:700;white-space:nowrap}
+.portal-btn:hover{background:var(--secondary-hover)}
+.menu-mobile{display:none;border:0;background:none;color:#fff;font-size:31px;cursor:pointer}
+
+.equipe-hero{
+    min-height:680px;
+    display:flex;
+    align-items:center;
+    padding:145px 0 80px;
+    background:var(--primary-dark);
+}
+.equipe-hero-conteudo{
+    display:grid;
+    grid-template-columns:.85fr 1.15fr;
+    align-items:center;
+    gap:70px;
+}
+.equipe-hero-texto>span,.titulo-equipe>span{
+    display:block;
+    margin-bottom:11px;
+    color:var(--secondary);
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+.equipe-hero-texto h1{
+    color:#fff;
+    font-family:'Fraunces',serif;
+    font-size:70px;
+    line-height:1;
+}
+.equipe-hero-texto p{
+    max-width:520px;
+    margin-top:25px;
+    color:#d4dce8;
+    font-size:18px;
+    line-height:1.75;
+}
+.hero-link{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    margin-top:30px;
+    padding:14px 19px;
+    border:1px solid rgba(255,255,255,.45);
+    color:#fff;
+    font-size:13px;
+    font-weight:700;
+}
+.hero-link:hover{background:#fff;color:var(--primary)}
+.equipe-hero-imagem{
+    height:430px;
+    overflow:hidden;
+    border-radius:18px;
+    border:1px solid rgba(255,255,255,.15);
+    box-shadow:0 25px 60px rgba(0,0,0,.25);
+}
+.equipe-hero-imagem img{width:100%;height:100%;object-fit:cover;object-position:center}
+
+.gestao-secao,.equipe-anterior-secao,.portal-equipe-secao,.historico-equipe{padding:95px 0}
+.gestao-secao{background:#fff}
+.portal-equipe-secao{background:var(--secondary)}
+.equipe-anterior-secao{background:#f2f5f7}
+.historico-equipe{background:var(--primary)}
+
+.titulo-equipe{max-width:760px;margin-bottom:48px}
+.titulo-equipe h2{font-family:'Fraunces',serif;font-size:48px;line-height:1.1;color:var(--primary)}
+.titulo-equipe p{margin-top:16px;color:var(--text-light);font-size:16px;line-height:1.7}
+.titulo-claro>span,.titulo-claro h2,.titulo-claro p{color:#fff}
+
+.coordenadoras-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;margin-bottom:40px}
+.integrantes-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;align-items:stretch}
+.integrante{
+    display:flex;
+    flex-direction:column;
+    min-width:0;
+    height:100%;
+    overflow:hidden;
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:16px;
+    color:inherit;
+    transition:transform .25s,box-shadow .25s,border-color .25s;
+}
+.integrante-link{cursor:pointer}
+.integrante:hover{transform:translateY(-5px);border-color:rgba(22,165,163,.5);box-shadow:var(--shadow)}
+.integrante-foto{width:100%;height:255px;overflow:hidden;background:#e5e9ed}
+.integrante-foto img{width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform .35s}
+.integrante:hover .integrante-foto img{transform:scale(1.035)}
+.integrante-texto{display:flex;flex:1;flex-direction:column;padding:21px}
+.integrante-texto h3{font-family:'Fraunces',serif;font-size:20px;line-height:1.25;color:var(--primary)}
+.integrante-texto p{margin-top:7px;color:var(--text-light);font-size:13px;line-height:1.5}
+.cargo{display:block;margin-bottom:8px;color:var(--secondary);font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase}
+.card-link-texto{display:inline-flex;align-items:center;gap:6px;margin-top:auto;padding-top:15px;color:var(--secondary);font-size:12px;font-weight:700}
+.integrante-link:hover .card-link-texto i{transform:translate(2px,-2px)}
+.card-link-texto i{transition:.25s}
+
+.coordenadora{display:grid;grid-template-columns:220px minmax(0,1fr);min-height:290px}
+.coordenadora .integrante-foto{height:100%;min-height:290px}
+.coordenadora .integrante-texto{justify-content:center;padding:34px}
+.coordenadora .integrante-texto h3{font-size:27px}
+
+.portal-integrantes .integrante{border-color:rgba(255,255,255,.35)}
+
+.lista-equipe{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--border);border-left:1px solid var(--border)}
+.lista-equipe article{min-height:110px;padding:23px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);background:#fff}
+.lista-equipe h3{font-family:'Fraunces',serif;color:var(--primary);font-size:18px;line-height:1.3}
+.lista-equipe p{margin-top:7px;color:var(--text-light);font-size:13px}
+
+.coordenacoes-anteriores{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:28px}
+.coordenacoes-anteriores article{padding:30px;border-left:5px solid var(--secondary);background:#fff}
+.coordenacoes-anteriores span{display:block;margin-bottom:9px;color:var(--secondary);font-size:11px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase}
+.coordenacoes-anteriores h3{font-family:'Fraunces',serif;font-size:25px;color:var(--primary)}
+.coordenacoes-anteriores p{margin-top:7px;color:var(--text-light)}
+
+.lista-expansivel{background:#fff}
+.lista-expansivel summary{display:flex;align-items:center;justify-content:space-between;padding:23px 27px;cursor:pointer;list-style:none;font-family:'Fraunces',serif;font-size:22px;font-weight:600;color:var(--primary)}
+.lista-expansivel summary::-webkit-details-marker{display:none}
+.lista-expansivel summary i{color:var(--secondary);font-size:27px;transition:.25s}
+.lista-expansivel[open] summary i{transform:rotate(180deg)}
+.lista-historico{border-top:1px solid var(--border)}
+
+.equipe-frase-final{padding:80px 0;background:#eef2f5;text-align:center}
+.equipe-frase-final p{max-width:850px;margin:auto;font-family:'Fraunces',serif;font-size:38px;line-height:1.3;color:var(--primary)}
+.equipe-frase-final span{display:block;margin-top:20px;color:var(--secondary);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase}
+
+.footer{background:#111c32;color:#fff}
+.footer-conteudo{display:grid;grid-template-columns:1.5fr .7fr .7fr;gap:60px;padding:62px 0 52px}
+.footer-logo{display:flex;align-items:center;gap:13px;margin-bottom:20px}
+.footer-logo img{width:56px;height:56px;border-radius:50%;object-fit:cover}
+.footer-logo strong,.footer-logo span{display:block}
+.footer-logo strong{font-family:'Fraunces',serif;font-size:19px}
+.footer-logo span{margin-top:4px;color:var(--secondary);font-size:11px;font-weight:700}
+.footer-marca>p{max-width:520px;margin-top:8px;color:#b8c2d2;font-size:14px;line-height:1.7}
+.footer-links{display:flex;flex-direction:column;align-items:flex-start}
+.footer-links h3,.footer-redes h3{margin-bottom:17px;font-size:15px}
+.footer-links a{margin-bottom:10px;color:#bac4d4;font-size:14px}
+.footer-links a:hover{color:var(--secondary)}
+.footer-redes>div{display:flex;gap:8px}
+.footer-redes a{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border:1px solid rgba(255,255,255,.2);border-radius:8px;font-size:18px}
+.footer-redes a:hover{background:var(--secondary);border-color:var(--secondary)}
+.footer-final{padding:20px 0;border-top:1px solid rgba(255,255,255,.12);color:#8f9bae;font-size:12px;text-align:center}
+
+@media(max-width:1100px){
+    .nav{grid-template-columns:230px 1fr auto;gap:18px}
+    nav{gap:15px}
+    nav a{font-size:12px}
+    .integrantes-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .coordenadora{grid-template-columns:180px minmax(0,1fr)}
+}
+@media(max-width:900px){
+    .nav{display:flex;justify-content:space-between}
+    nav{position:absolute;top:82px;left:5%;right:5%;display:none;align-items:flex-start;flex-direction:column;padding:24px;border-radius:12px;background:rgba(17,28,50,.98)}
+    nav.aberto{display:flex}
+    nav a{font-size:15px}
+    .portal-btn{display:none}
+    .menu-mobile{display:block}
+    .equipe-hero{min-height:auto;padding:140px 0 70px}
+    .equipe-hero-conteudo{grid-template-columns:1fr;gap:45px}
+    .equipe-hero-texto{text-align:center}
+    .equipe-hero-texto p{margin:24px auto 0}
+    .equipe-hero-imagem{height:380px}
+    .coordenadoras-grid{grid-template-columns:1fr}
+    .integrantes-grid,.lista-equipe{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .footer-conteudo{grid-template-columns:1fr 1fr}
+    .footer-marca{grid-column:1/-1}
+}
+@media(max-width:600px){
+    .logo-text strong{font-size:14px}
+    .logo-text span{font-size:15px}
+    .equipe-hero{padding:125px 0 55px}
+    .equipe-hero-texto h1{font-size:48px}
+    .equipe-hero-texto p{font-size:16px}
+    .equipe-hero-imagem{height:285px}
+    .gestao-secao,.equipe-anterior-secao,.portal-equipe-secao,.historico-equipe{padding:65px 0}
+    .titulo-equipe h2{font-size:37px}
+    .integrantes-grid,.lista-equipe,.coordenacoes-anteriores{grid-template-columns:1fr}
+    .coordenadora{display:flex;flex-direction:column}
+    .coordenadora .integrante-foto{height:320px;min-height:320px}
+    .integrante-foto{height:320px}
+    .equipe-frase-final p{font-size:29px}
+    .footer-conteudo{grid-template-columns:1fr}
+    .footer-marca{grid-column:auto}
+}

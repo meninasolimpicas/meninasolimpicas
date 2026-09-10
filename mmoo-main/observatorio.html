@@ -1,0 +1,347 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Observatório | Movimento Meninas Olímpicas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="observatorio.css">
+    <link rel="stylesheet" href="navegacao.css">
+</head>
+<body>
+
+<header class="site-header nav-unificada" id="header">
+    <div class="container nav nav-unificada-container">
+        <a href="index.html" class="logo nav-logo" aria-label="Página inicial">
+            <img src="logo.jpg" alt="Logo do Movimento Meninas Olímpicas">
+            <div class="logo-text">
+                <strong>MOVIMENTO</strong>
+                <span>MENINAS OLÍMPICAS</span>
+            </div>
+        </a>
+
+        <nav id="nav-principal" class="nav-unificada-menu" aria-label="Navegação principal">
+            <a href="index.html" data-page="index">Início</a>
+
+            <div class="dropdown nav-dropdown">
+                <button class="dropdown-toggle nav-dropdown-toggle ativo" type="button" aria-expanded="false">
+                    Quem somos
+                    <i class="ri-arrow-down-s-line"></i>
+                </button>
+                <div class="submenu nav-submenu">
+                    <a href="quem-somos.html" data-page="quem-somos">Equipe</a>
+                    <a href="biografia.html" data-page="biografia">Biografia</a>
+                    <a href="observatorio.html" data-page="observatorio" class="ativo">Observatório</a>
+                    
+                </div>
+            </div>
+
+            <div class="dropdown nav-dropdown">
+                <button class="dropdown-toggle nav-dropdown-toggle" type="button" aria-expanded="false">
+                    Olimpíadas
+                    <i class="ri-arrow-down-s-line"></i>
+                </button>
+                <div class="submenu submenu-olimpiadas nav-submenu">
+                    <a href="olimpiadas.html" data-page="olimpiadas">Página de Olimpíadas</a>
+                    <a href="olimpiadas.html#femininas">Olimpíadas femininas</a>
+                    <a href="olimpiadas.html#seletivas">Seletivas</a>
+                    <a href="olimpiadas.html#universalizadas">Universalizadas</a>
+                    <a href="olimpiadas.html#matematica">Matemática e Economia</a>
+                    <a href="olimpiadas.html#computacao">Computação e Tecnologia</a>
+                    <a href="olimpiadas.html#ciencias">Ciências da Natureza</a>
+                    <a href="olimpiadas.html#humanas">Humanas e Sociais</a>
+                </div>
+            </div>
+<div class="dropdown nav-dropdown">
+    <button class="dropdown-toggle nav-dropdown-toggle" type="button" aria-expanded="false">
+        Trajetória
+        <i class="ri-arrow-down-s-line"></i>
+    </button>
+
+    <div class="submenu submenu-largo nav-submenu">
+        <a href="acoes.html">Trajetória</a>
+        <a href="homenagens.html">Homenagens</a>
+        <a href="premio-jovem-talento.html">Prêmio Jovem Talento</a>
+        <a href="premio-legislativo.html">Prêmio Legislativo</a>
+    </div>
+</div>
+            <a href="premios.html">Prêmios</a>
+            <a href="index.html#contato">Contato</a>
+        </nav>
+
+     <a href="https://olimpiadas.ufsm.br/" class="portal-btn" target="_blank">
+    Portal Olímpico
+</a>
+
+        <button class="menu-mobile nav-menu-mobile" type="button" aria-label="Abrir menu" aria-controls="nav-principal" aria-expanded="false">
+            <i class="ri-menu-line"></i>
+        </button>
+    </div>
+</header>
+
+<main>
+    <section class="obs-hero">
+        <div class="container obs-hero-grid">
+            <div class="obs-hero-texto">
+                <span>Pesquisa e dados</span>
+                <h1>Observatório Movimento Meninas Olímpicas</h1>
+                <p>O observatório foi lançado em 2019 e atualizado em 2026.</p>
+
+                <div class="share-row">
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://tfcbr.inf.ufsm.br/" target="_blank" rel="noopener noreferrer" aria-label="Compartilhar no Facebook"><i class="ri-facebook-fill"></i></a>
+                    <a href="mailto:?subject=Observatório Movimento Meninas Olímpicas&body=https://tfcbr.inf.ufsm.br/" aria-label="Enviar por e-mail"><i class="ri-mail-line"></i></a>
+                    <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+                    <button type="button" id="copiar-link" aria-label="Copiar link"><i class="ri-link"></i></button>
+                </div>
+
+                <a href="https://tfcbr.inf.ufsm.br/" target="_blank" rel="noopener noreferrer" class="hero-btn">
+                    Acessar TFC Brasil
+                    <i class="ri-arrow-right-up-line"></i>
+                </a>
+            </div>
+
+            <div class="obs-hero-imagem">
+                <img src="verao.jpg" alt="Grupo de meninas participantes de atividades científicas">
+            </div>
+        </div>
+    </section>
+
+    <section class="obs-intro">
+        <div class="container intro-grid">
+            <div>
+                <span class="secao-kicker">Por que isso importa</span>
+                <h2>Meninas nas olimpíadas hoje, mulheres nos espaços de decisão amanhã</h2>
+            </div>
+
+            <div class="texto-longo">
+                <p>O percentual de meninas premiadas em olimpíadas científicas equivale ao percentual de mulheres em espaços de poder. Assim, o movimento busca ampliar a presença feminina na ciência, na política e no mundo empresarial por meio do incentivo à participação igualitária das meninas em olimpíadas de conhecimento.</p>
+                <p>A presença feminina é inversamente proporcional ao prestígio das olimpíadas ou dos espaços de poder. O Movimento Meninas Olímpicas atua para reverter essa desigualdade.</p>
+            </div>
+        </div>
+
+        <div class="container imagem-destaque">
+            <img src="povo.jpg" alt="Comparação entre mulheres em espaços de poder e meninas nas olimpíadas científicas">
+        </div>
+    </section>
+
+    <section class="obs-secao secao-cinza">
+        <div class="container">
+            <div class="titulo-secao">
+                <span>Comparações internacionais</span>
+                <h2>Olimpíadas internacionais e Prêmios Nobel</h2>
+                <p>O percentual de meninas participantes em olimpíadas internacionais também se aproxima do percentual de mulheres agraciadas por grandes premiações científicas.</p>
+            </div>
+
+            <div class="galeria-dupla">
+                <figure>
+                    <img src="olimpiadas.jpg" alt="Dados sobre meninas em olimpíadas internacionais e mulheres em prêmios Nobel">
+                    <figcaption>Dados comparativos sobre participação feminina.</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="intmat.jpg" alt="Gráfico comparando IMO e IOI">
+                    <figcaption>Comparação histórica entre IMO e IOI.</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <section class="obs-secao">
+        <div class="container">
+            <div class="titulo-secao">
+                <span>Mapas das meninas olímpicas</span>
+                <h2>Distribuição regional em 2019</h2>
+                <p>Mapas das meninas premiadas nas principais olimpíadas científicas brasileiras.</p>
+            </div>
+
+            <div class="mapas-grid">
+                <figure><img src="mapa1.jpg" alt="Mapa OBMEP 2019"><figcaption>OBMEP 2019</figcaption></figure>
+                <figure><img src="mapa2.jpg" alt="Mapa OBFEP 2019"><figcaption>OBFEP 2019</figcaption></figure>
+                <figure><img src="mapa3.jpg" alt="Mapa OBM 2019"><figcaption>OBM 2019</figcaption></figure>
+                <figure><img src="mapa4.jpg" alt="Mapa OBI 2019"><figcaption>OBI 2019</figcaption></figure>
+            </div>
+        </div>
+    </section>
+
+    <section class="obs-secao secao-azul">
+        <div class="container">
+            <div class="titulo-secao titulo-claro">
+                <span>Meninas nas olimpíadas</span>
+                <h2>Participação por níveis</h2>
+                <p>Conforme aumenta o nível de idade e a competitividade das olimpíadas, diminui o percentual de meninas participantes.</p>
+            </div>
+
+            <div class="galeria-dupla">
+                <figure><img src="meninas11.jpg" alt="Gráfico meninas nas olimpíadas"><figcaption>Comparação geral entre meninas e meninos.</figcaption></figure>
+                <figure><img src="niveis.jpg" alt="Gráfico meninas por níveis"><figcaption>Participação feminina por níveis e olimpíadas.</figcaption></figure>
+            </div>
+        </div>
+    </section>
+
+    <section class="obs-secao">
+        <div class="container">
+            <div class="titulo-secao">
+                <span>OBMEP</span>
+                <h2>Olimpíada Brasileira de Matemática das Escolas Públicas</h2>
+                <p>Segundo os dados levantados pelo movimento, quanto maior a importância da medalha, menor tende a ser o percentual feminino.</p>
+            </div>
+
+            <figure class="grafico-grande">
+                <img src="medals.png" alt="Gráfico OBMEP em números">
+            </figure>
+
+            <div class="dados-rapidos">
+                <article><strong>2014</strong><span>4 meninas medalhistas de ouro</span></article>
+                <article><strong>2016</strong><span>9 meninas medalhistas de ouro</span></article>
+                <article><strong>2018</strong><span>15 meninas medalhistas de ouro</span></article>
+            </div>
+        </div>
+    </section>
+
+    <section class="obs-secao secao-cinza">
+        <div class="container">
+            <div class="titulo-secao">
+                <span>OBI</span>
+                <h2>Olimpíada Brasileira de Informática</h2>
+                <p>Em 2020, o Movimento organizou o 1º Torneio Feminino de Computação, impactando a presença das meninas no Nível 1 da modalidade Programação.</p>
+            </div>
+
+            <div class="graficos-grid">
+                <figure><img src="modalidade.jpg" alt="Modalidade Programação OBI"><figcaption>Participação de meninas e meninos na OBI.</figcaption></figure>
+                <figure><img src="obi.png" alt="Nível Programação OBI"><figcaption>Distribuição por ano e gênero.</figcaption></figure>
+                <figure><img src="prog.jpg" alt="Percentual feminino no Nível 1"><figcaption>Evolução do percentual feminino no Nível 1.</figcaption></figure>
+                <figure><img src="informatica.jpg" alt="Medalhas na OBI"><figcaption>Distribuição de medalhas por gênero.</figcaption></figure>
+            </div>
+        </div>
+    </section>
+
+    <section class="obs-secao">
+        <div class="container">
+            <div class="titulo-secao">
+                <span>Outras olimpíadas</span>
+                <h2>OBF, OBFEP e OBM</h2>
+                <p>A sub-representação das meninas premiadas nas olimpíadas científicas, principalmente na área de STEM, tem se mantido constante nas últimas décadas.</p>
+            </div>
+
+            <div class="graficos-grid">
+                <figure><img src="obf.jpg" alt="Gráfico da OBF"><figcaption>OBF — Olimpíada Brasileira de Física.</figcaption></figure>
+                <figure><img src="obfep.png" alt="Gráfico da OBFEP"><figcaption>OBFEP — Olimpíada Brasileira de Física das Escolas Públicas.</figcaption></figure>
+                <figure><img src="obm1.png" alt="Gráfico da OBM"><figcaption>OBM — Olimpíada Brasileira de Matemática.</figcaption></figure>
+                <figure><img src="obm2.png" alt="Gráfico da OBM em números"><figcaption>OBM em números.</figcaption></figure>
+            </div>
+        </div>
+    </section>
+
+    <section class="obs-secao secao-verde">
+        <div class="container">
+            <div class="titulo-secao titulo-claro">
+                <span>Trajetórias e equipes</span>
+                <h2>Meninas em competições científicas</h2>
+            </div>
+
+            <div class="historias-grid">
+                <article>
+                    <img src="icho.jpg" alt="Equipe ICHO 2021">
+                    <div>
+                        <span>ICHO 2021</span>
+                        <h3>International Chemistry Olympiad</h3>
+                        <p>Na ICHO 2021, a equipe brasileira foi composta por 75% de meninas, enquanto o histórico anterior era majoritariamente masculino.</p>
+                    </div>
+                </article>
+
+                <article>
+                    <img src="verao.jpg" alt="Escola de Verão do ICPC">
+                    <div>
+                        <span>ICPC</span>
+                        <h3>Escola de Verão</h3>
+                        <p>Hana G. Albuquerque, Marina Malta Nogueira e Cássia Carolina Aguiar participaram de atividades ligadas à programação competitiva.</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="universidades-bloco">
+                <h3>Melhores universidades</h3>
+                <p>Universidades de excelência, como o MIT, historicamente apresentaram maioria masculina entre estudantes brasileiros aceitos. Em 2022, porém, as meninas representaram 75% dos aprovados brasileiros citados pelo movimento.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="frase-final">
+        <div class="container">
+            <p>Meninas olímpicas de hoje serão as mulheres nos espaços de decisão do amanhã.</p>
+            <span>Desde 2016 incentivando as meninas olímpicas.</span>
+        </div>
+    </section>
+</main>
+
+<footer class="footer" id="contato">
+    <div class="container footer-conteudo">
+        <div class="footer-marca">
+            <div class="footer-logo">
+                <img src="logo.jpg" alt="Logo do Movimento Meninas Olímpicas">
+                <div>
+                    <strong>Movimento Meninas Olímpicas</strong>
+                    <span>Desde 2016</span>
+                </div>
+            </div>
+            <p>Meninas olímpicas de hoje serão as mulheres nos espaços de decisão do amanhã.</p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Navegação</h3>
+            <a href="index.html">Início</a>
+            <a href="quem-somos.html">Quem somos</a>
+            <a href="biografia.html">Biografia</a>
+            <a href="observatorio.html">Observatório</a>
+        </div>
+
+        <div class="footer-redes">
+            <h3>Redes sociais</h3>
+            <div>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-final">
+        <div class="container">© 2026 Movimento Meninas Olímpicas. Todos os direitos reservados.</div>
+    </div>
+</footer>
+
+<script>
+const menuButton = document.querySelector(".menu-mobile");
+const nav = document.querySelector("#nav-principal");
+const copyButton = document.querySelector("#copiar-link");
+
+menuButton.addEventListener("click", () => {
+    const aberto = nav.classList.toggle("aberto");
+    menuButton.setAttribute("aria-expanded", String(aberto));
+    menuButton.querySelector("i").className = aberto ? "ri-close-line" : "ri-menu-line";
+});
+
+copyButton.addEventListener("click", async () => {
+    try {
+        await navigator.clipboard.writeText(window.location.href);
+        copyButton.classList.add("copiado");
+        copyButton.innerHTML = '<i class="ri-check-line"></i>';
+        setTimeout(() => {
+            copyButton.classList.remove("copiado");
+            copyButton.innerHTML = '<i class="ri-link"></i>';
+        }, 1800);
+    } catch {
+        alert("Não foi possível copiar o link.");
+    }
+});
+</script>
+
+    <script src="navegacao.js" defer></script>
+</body>
+</html>

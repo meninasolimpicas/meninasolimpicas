@@ -1,0 +1,800 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Prêmios | Movimento Meninas Olímpicas</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="premios.css">
+</head>
+
+<body>
+
+<header class="site-header" id="header">
+    <div class="container nav">
+
+        <a href="index.html" class="logo">
+            <img src="logo.jpg" alt="Logo do Movimento Meninas Olímpicas">
+            <div class="logo-text">
+                <strong>MOVIMENTO</strong>
+                <span>MENINAS OLÍMPICAS</span>
+            </div>
+        </a>
+
+        <nav id="nav-principal">
+            <a href="index.html">Início</a>
+
+            <div class="dropdown">
+                <button class="dropdown-toggle" type="button" aria-expanded="false">
+                    Quem somos
+                    <i class="ri-arrow-down-s-line"></i>
+                </button>
+
+                <div class="submenu">
+                    <a href="quem-somos.html">Equipe</a>
+                    <a href="biografia.html">Biografia</a>
+                    <a href="observatorio.html">Observatório</a>
+                    
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropdown-toggle" type="button" aria-expanded="false">
+                    Olimpíadas
+                    <i class="ri-arrow-down-s-line"></i>
+                </button>
+
+                <div class="submenu submenu-olimpiadas">
+                    <a href="olimpiadas.html">Página de Olimpíadas</a>
+                    <a href="olimpiadas.html#femininas">Olimpíadas femininas</a>
+                    <a href="olimpiadas.html#seletivas">Seletivas</a>
+                    <a href="olimpiadas.html#universalizadas">Universalizadas</a>
+                    <a href="olimpiadas.html#matematica">Matemática e Economia</a>
+                    <a href="olimpiadas.html#computacao">Computação e Tecnologia</a>
+                    <a href="olimpiadas.html#ciencias">Ciências da Natureza</a>
+                    <a href="olimpiadas.html#humanas">Humanas e Sociais</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropdown-toggle ativo" type="button" aria-expanded="false">
+                    Galeria de Prêmios
+                    <i class="ri-arrow-down-s-line"></i>
+                </button>
+
+                <div class="submenu submenu-premios">
+                    <a href="trofeus.html">Troféus Meninas Olímpicas</a>
+                    <a href="imo.html">IMO — Prêmio Mirzakhani</a>
+                    <a href="omcplp.html">OMCPLP</a>
+                    <a href="egoi.html">EGOI</a>
+                    <a href="egmo.html">EGMO</a>
+                    <a href="pagmo.html">PAGMO</a>
+                    <a href="conesul.html">Conesul</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropdown-toggle" type="button" aria-expanded="false">
+                    Trajetória <span class="seta">⌄</span>
+                </button>
+                <div class="submenu submenu-largo">
+                    <a href="acoes.html">Trajetória</a>
+                    <a href="homenagens.html">Homenagens</a>
+                    <a href="premio-jovem-talento.html">Prêmio Jovem Talento</a>
+                    <a href="premio-legislativo.html">Prêmio Legislativo</a>
+                </div>
+            </div>
+            <a href="index.html#contato">Contato</a>
+        </nav>
+
+        <a href="https://olimpiadas.ufsm.br/"
+           class="portal-btn"
+           target="_blank"
+           rel="noopener noreferrer">
+            Portal Olímpico
+            <i class="ri-arrow-right-up-line"></i>
+        </a>
+
+        <button class="menu-mobile"
+                type="button"
+                aria-label="Abrir menu"
+                aria-controls="nav-principal"
+                aria-expanded="false">
+            <i class="ri-menu-line"></i>
+        </button>
+
+    </div>
+</header>
+
+<main>
+
+    <section class="premios-hero">
+        <div class="container premios-hero-grid">
+
+            <div class="premios-hero-texto">
+                <span>Reconhecimento e trajetória</span>
+
+                <h1>Galeria de Prêmios</h1>
+
+                <p>
+                    Histórias de meninas brasileiras premiadas em olimpíadas
+                    científicas nacionais e internacionais.
+                </p>
+
+                <a href="#primeiros-ouros" class="hero-btn">
+                    Conheça as premiadas
+                    <i class="ri-arrow-down-line"></i>
+                </a>
+            </div>
+
+            <div class="premios-hero-imagens">
+                <div class="hero-foto">
+                    <img src="imopremio.jpg" alt="Premiação de meninas olímpicas">
+                    <span>Premiações internacionais</span>
+                </div>
+
+                <div class="hero-foto">
+                    <img src="darniele.jpg" alt="Meninas premiadas em olimpíadas">
+                    <span>Talentos brasileiros</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="atalhos-premios">
+        <div class="container atalhos-grid">
+            <a href="#primeiros-ouros">Primeiros ouros</a>
+            <a href="#fisica">Física</a>
+            <a href="#imo">Matemática</a>
+            <a href="#quimica">Química</a>
+            <a href="#trofeus">Troféus</a>
+            <a href="#obmep">OBMEP</a>
+            <a href="#poder-publico">Poder público</a>
+            <a href="#semanas-olimpicas">Semanas Olímpicas</a>
+        </div>
+    </section>
+
+    <section class="premios-secao" id="primeiros-ouros">
+        <div class="container">
+
+            <div class="titulo-secao">
+                <span>Destaques históricos</span>
+                <h2>Primeiros Ouros do Brasil</h2>
+            </div>
+
+            <div class="destaques-grid">
+
+                <article class="destaque-card">
+                    <div class="premio-imagem">
+                        <img src="ivna.jpg" alt="Ivna Ferreira Gomes">
+                        <span>Ivna Ferreira Gomes</span>
+                    </div>
+
+                    <div class="destaque-texto">
+                        <span>1º ouro na ICHO 2018</span>
+                        <h3>Ivna Ferreira Gomes</h3>
+                        <p>Bronze na ICHO 2017.</p>
+                        <strong>ICHO — Olimpíada Internacional de Química</strong>
+                    </div>
+                </article>
+
+                <article class="destaque-card">
+                    <div class="premio-imagem">
+                        <img src="bigolin.jpg" alt="Mariana Bigolin Groff">
+                        <span>Mariana Bigolin Groff</span>
+                    </div>
+
+                    <div class="destaque-texto">
+                        <span>1º ouro na EGMO 2019</span>
+                        <h3>Mariana Bigolin Groff</h3>
+                        <p>Prata em 2018 e bronze em 2017.</p>
+                        <strong>EGMO — Olimpíada Europeia de Matemática para Garotas</strong>
+                    </div>
+                </article>
+
+                <article class="destaque-card">
+                    <div class="premio-imagem">
+                        <img src="valle.jpg" alt="Carolina Valle Costa">
+                        <span>Carolina Valle Costa</span>
+                    </div>
+
+                    <div class="destaque-texto">
+                        <span>1º ouro na EGOI 2021</span>
+                        <h3>Carolina Valle Costa</h3>
+                        <p>Bronze na IOI 2021.</p>
+                        <strong>EGOI — Olimpíada Europeia de Informática para Garotas</strong>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="premios-secao secao-cinza" id="fisica">
+        <div class="container">
+
+            <div class="titulo-secao">
+                <span>Competições internacionais</span>
+                <h2>Física: IPhO, OIbF e EuPhO</h2>
+            </div>
+
+            <div class="conteudo-duplo">
+
+                <div class="lista-premios">
+
+                    <article>
+                        <h3>Olimpíada Internacional de Física — IPhO</h3>
+                        <ul>
+                            <li>Lara Timbó Araújo — Bronze, 2012</li>
+                            <li>Luiza Pillar Cabral — participação em 2001</li>
+                        </ul>
+                    </article>
+
+                    <article>
+                        <h3>Olimpíada Ibero-Americana de Física — OIbF</h3>
+                        <ul>
+                            <li>2001 — Livia Maria Frota Lima — Ouro</li>
+                            <li>2001 — Martha Priscila Torres — Prata</li>
+                            <li>2008 — Mariana Quezado Costa Lima — Ouro</li>
+                            <li>2009 — Luana Benedetto de Assis — Prata</li>
+                            <li>2011 — Lara Timbó Araújo — Ouro</li>
+                            <li>2012 — Liara Guinsberg — Bronze</li>
+                            <li>2016 — Marina Maciel Ansanelli — Ouro</li>
+                            <li>2020 — Maria Eduarda Gonçalves Freitas — Ouro</li>
+                        </ul>
+                    </article>
+
+                    <article>
+                        <h3>EuPhO</h3>
+                        <ul>
+                            <li>Alicia Duarte Silva — Prata em 2021 e menção honrosa em 2022</li>
+                        </ul>
+                    </article>
+
+                </div>
+
+                <div class="galeria-lateral">
+                    <figure>
+                        <div class="imagem-placeholder">
+                            <img src="laratimbo.jpg" alt="Premiadas da IPhO">
+                            <span>Imagem da IPhO</span>
+                        </div>
+                        <figcaption>Olimpíada Internacional de Física</figcaption>
+                    </figure>
+
+                    <figure>
+                        <div class="imagem-placeholder">
+                            <img src="aliciaduarte.jpg" alt="Premiadas da OIbF">
+                            <span>Imagem da OIbF</span>
+                        </div>
+                        <figcaption>Olimpíada Ibero-Americana de Física</figcaption>
+                    </figure>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="premios-secao" id="imo">
+        <div class="container">
+
+            <div class="titulo-secao">
+                <span>Matemática internacional</span>
+                <h2>IMO e OIM</h2>
+                <p>
+                    Em 2017, o Movimento Meninas Olímpicas propôs o Troféu Meninas
+                    Olímpicas à Olimpíada Internacional de Matemática.
+                </p>
+            </div>
+
+            <div class="texto-destaque">
+                <p>
+                    O Brasil teve apenas sete meninas em equipes da IMO nas edições
+                    de 1983, 1988, 1992, 1998, 2002, 2003, 2010, 2011 e 2012.
+                    As meninas representam aproximadamente 10% das participantes.
+                </p>
+            </div>
+
+            <div class="linha-galeria">
+
+                <article class="ano-card">
+                    <div class="imagem-placeholder">
+                        <img src="ledafm.jpg" alt="Equipe IMO 1983">
+                        <span>Foto: IMO 1983</span>
+                    </div>
+                    <h3>IMO 1983</h3>
+                    <ul>
+                        <li>Leda Braga</li>
+                        <li>Maria Celia Paiva de Freitas — IMO 1988</li>
+                        <li>Fatima Luciana Rocha — IMO 1992</li>
+                    </ul>
+                </article>
+
+                <article class="ano-card">
+                    <div class="imagem-placeholder">
+                        <img src="darniele.jpg" alt="Equipe IMO 1998">
+                        <span>Foto: IMO 1998</span>
+                    </div>
+                    <h3>IMO 1998</h3>
+                    <ul>
+                        <li>Darniele Veras</li>
+                    </ul>
+                </article>
+
+                <article class="ano-card">
+                    <div class="imagem-placeholder">
+                        <img src="queiroz.jpg" alt="Larissa Cavalcanti Queiroz">
+                        <span>Imagem de Larissa Cavalcanti Queiroz</span>
+                    </div>
+                    <h3>Larissa Cavalcanti Queiroz</h3>
+                    <ul>
+                        <li>Prata na IMO 2002</li>
+                        <li>Menção honrosa na IMO 2003</li>
+                        <li>Melhor premiação feminina do Brasil</li>
+                    </ul>
+                </article>
+
+                <article class="ano-card">
+                    <div class="imagem-placeholder">
+                        <img src="deborah.jpg" alt="Equipe IMO 2011">
+                        <span>Foto: IMO 2011</span>
+                    </div>
+                    <h3>Deborah Barbosa Alves</h3>
+                    <ul>
+                        <li>Menção honrosa na IMO 2010</li>
+                        <li>Bronze na IMO 2011</li>
+                        <li>Ouro na OIM 2010</li>
+                    </ul>
+                </article>
+
+                <article class="ano-card">
+                    <div class="imagem-placeholder">
+                        <img src="mendes.jpg" alt="Equipe IMO 2012">
+                        <span>Foto: IMO 2012</span>
+                    </div>
+                    <h3>Maria Clara Mendes</h3>
+                    <ul>
+                        <li>Bronze na IMO 2011</li>
+                        <li>Menção honrosa na IMO 2012</li>
+                        <li>Prata na OIM 2011</li>
+                    </ul>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="premios-secao secao-azul" id="quimica">
+        <div class="container">
+
+            <div class="titulo-secao titulo-claro">
+                <span>Química internacional</span>
+                <h2>ICHO e OIAQ</h2>
+            </div>
+
+            <div class="acordeoes">
+
+                <details open>
+                    <summary>
+                        ICHO 2021
+                        <i class="ri-arrow-down-s-line"></i>
+                    </summary>
+                    <div class="acordeao-conteudo">
+                        <div class="imagem-placeholder">
+                            <img src="icho2021.jpg" alt="Equipe ICHO 2021">
+                            <span>Imagem da equipe ICHO 2021</span>
+                        </div>
+                        <ul>
+                            <li>Hana G. Albuquerque — Bronze</li>
+                            <li>Marina Malta Nogueira — Bronze</li>
+                            <li>Cássia Carolina Aguiar — Bronze</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>
+                        ICHO 2018 e 2017
+                        <i class="ri-arrow-down-s-line"></i>
+                    </summary>
+                    <div class="acordeao-conteudo">
+                        <div class="imagem-placeholder">
+                            <img src="icho2.jpg" alt="Equipe ICHO 2018">
+                            <span>Imagem da ICHO 2018</span>
+                        </div>
+                        <ul>
+                            <li>2018 — Ivna de Lima Ferreira Gomes — Ouro</li>
+                            <li>2017 — Ivna de Lima Ferreira Gomes — Bronze</li>
+                            <li>2017 — Lígia Oliveira Toscano de Melo — Bronze</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>
+                        ICHO e OIAQ 2013–2014
+                        <i class="ri-arrow-down-s-line"></i>
+                    </summary>
+                    <div class="acordeao-conteudo">
+                        <div class="imagem-placeholder">
+                            <img src="icho2014.jpg" alt="Equipe ICHO 2014">
+                            <span>Imagem da ICHO 2014</span>
+                        </div>
+                        <ul>
+                            <li>ICHO 2014 — Chan Song Moon São — Bronze</li>
+                            <li>ICHO 2014 — Lia de Oliveira Domingues — participação</li>
+                            <li>OIAQ 2014 — Chan Song Moon São — Bronze</li>
+                            <li>ICHO 2013 — Vitória Nunes Medeiros — Bronze</li>
+                            <li>ICHO 2013 — Lívia Rodrigues de Araújo — Bronze</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>
+                        ICHO 2000–2012
+                        <i class="ri-arrow-down-s-line"></i>
+                    </summary>
+                    <div class="acordeao-conteudo sem-imagem">
+                        <ul>
+                            <li>2000 — Daniella Costa Moura</li>
+                            <li>2001 — Michelle Maria Teixeira Figueiredo</li>
+                            <li>2003 — Lorena Rodrigues Silva — Menção honrosa</li>
+                            <li>2004 — Karoline Matias Morais</li>
+                            <li>2005 — Juliana Vieira Mota — Bronze</li>
+                            <li>2005 — Camila Vasconcelos de Oliveira</li>
+                            <li>2006 — Thaís Macedo Bezerra Terceiro Jorge</li>
+                            <li>2007 — Thaís Macedo Bezerra Terceiro Jorge — Prata</li>
+                            <li>2008 — Thaís Macedo Bezerra Terceiro Jorge — Prata</li>
+                            <li>2010 — Jéssica Kazumi Okuma — Bronze</li>
+                            <li>2011 — Tábata Cláudia Amaral de Pontes — Bronze</li>
+                            <li>2012 — Vitória Nunes Medeiros — Bronze</li>
+                        </ul>
+                    </div>
+                </details>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="premios-secao" id="egmo">
+        <div class="container">
+
+            <div class="titulo-secao">
+                <span>Participação feminina internacional</span>
+                <h2>EGMO, PAGMO, OMCPLP, Conesul e EGOI</h2>
+            </div>
+
+           
+
+    <section class="premios-secao secao-cinza" id="trofeus">
+        <div class="container">
+
+            <div class="titulo-secao">
+                <span>Histórico de reconhecimento</span>
+                <h2>Troféu Meninas Olímpicas</h2>
+                <p>
+                    Desde 2016, mais de uma dezena de olimpíadas nacionais e
+                    internacionais criaram prêmios especiais para meninas.
+                </p>
+            </div>
+
+            <div class="linha-historica">
+
+                <article>
+                    <span>2016–2019</span>
+                    <h3>Olimpíada Paulista de Matemática</h3>
+                    <p>Troféu para Meninas.</p>
+                    <div class="imagem-placeholder">
+                        <img src="opmtrofeu.jpg" alt="Troféu para Meninas da OPM">
+                        <span>Imagem da premiação da OPM</span>
+                    </div>
+                </article>
+
+                <article>
+                    <span>2016–2020</span>
+                    <h3>IMO, OBF, OBM, Conesul, OBQ e OBB</h3>
+                    <p>Premiações especiais para meninas.</p>
+                    <div class="imagem-placeholder">
+                        <img src="trofeuobq.jpg" alt="Troféus entre 2016 e 2020">
+                        <span>Imagem dos troféus 2016–2020</span>
+                    </div>
+                </article>
+
+                <article>
+                    <span>2022–2024</span>
+                    <h3>Geo Brasil, ONC, Biotec, OBECON e OBB</h3>
+                    <p>Novas premiações e reconhecimentos.</p>
+                    <div class="imagem-placeholder">
+                        <img src="cientista.jpg" alt="Troféus entre 2022 e 2024">
+                        <span>Imagem dos troféus 2022–2024</span>
+                    </div>
+                </article>
+
+            </div>
+
+            <details class="lista-expansivel">
+                <summary>
+                    Ver premiadas de 2022 a 2024
+                    <i class="ri-arrow-down-s-line"></i>
+                </summary>
+
+                <div class="lista-nomes">
+                    <p><strong>Geo Brasil 2022:</strong> Ana Beatriz Souza Machado, Ana Beatriz Gomes dos Santos e Joana Liz Leita de Luna.</p>
+                    <p><strong>ONC 2022:</strong> Paula Silveira Araújo, Ana Clara Nunes Betanzzo, Luísa Dantas Portela, Ana Clara Leal Machado e Maria Eduarda Oliveira Gonçalves.</p>
+                    <p><strong>Biotec 2022:</strong> Maria Luísa Reis Neves.</p>
+                    <p><strong>ONC 2023:</strong> Eduarda Borges Oliveira de Almeida, Kaylanny Stefannely de Lira Ferreira, Ângela Kétlyn Silva de Souza, Isabelle Marin Della Méa e Amanda de Souza Carvalho.</p>
+                    <p><strong>OBECON 2024:</strong> Manuela Miranda Buesa.</p>
+                    <p><strong>OBB 2024:</strong> Iara Vitarelli.</p>
+                </div>
+            </details>
+
+        </div>
+    </section>
+
+    <section class="premios-secao" id="obmep">
+        <div class="container">
+
+            <div class="titulo-secao">
+                <span>2018–2024</span>
+                <h2>Troféu Meninas Olímpicas OBMEP</h2>
+            </div>
+
+            <div class="obmep-grid">
+
+                <article>
+                    <h3>2018</h3>
+                    <p>Luiza Clara de Albuquerque Pacheco</p>
+                    <p>Fernanda Ferro Morais</p>
+                    <p>Maria Eduarda Carvalho Martins</p>
+                </article>
+
+                <article>
+                    <h3>2019</h3>
+                    <p>Jessica Guedes</p>
+                    <p>Bianca Araújo</p>
+                    <p>Daniela Fernada Giraldo</p>
+                </article>
+
+                <article>
+                    <h3>2021</h3>
+                    <p>Giovanna Gualberto de Melo</p>
+                    <p>Camila Maede Shida</p>
+                    <p>Gabriella Santana Morgado</p>
+                </article>
+
+                <article>
+                    <h3>2022</h3>
+                    <p>Julia de Paula Pessoa Leguiza</p>
+                    <p>Luiza Calligaro Menegotto</p>
+                    <p>Alice Ella Scheider</p>
+                    <p>Bruna Holanda Barbosa Nogueira</p>
+                    <p>Cecilia Mileski de Paula</p>
+                </article>
+
+                <article>
+                    <h3>2023</h3>
+                    <p>Luisa Batista Mesquita</p>
+                    <p>Maria Clara Fontes Silva</p>
+                    <p>Sara Miyuka Abe</p>
+                    <p>Isabela Ruthner Dorn</p>
+                </article>
+
+                <article>
+                    <h3>2024 — Nível 1</h3>
+                    <p>Amanda Oliveira do Carmo</p>
+                    <p>Beatriz Santos Farias</p>
+                    <p>Emanuele Cunha Turri</p>
+                    <p>Emily Raiele dos Santos Silveira</p>
+                    <p>Isabela Ramos Nascimento</p>
+                    <p>Isabelle Saunders Vasconcelos</p>
+                    <p>Leticia Dias Damasceno</p>
+                    <p>Margarida Miranda Lima</p>
+                    <p>Maria Luiza Amaral Carlotti</p>
+                    <p>Yasmin Monegat Tomazzoni</p>
+                </article>
+
+                <article>
+                    <h3>2024 — Nível 2</h3>
+                    <p>Maria Luiza Fernandes Gonzaga</p>
+                </article>
+
+                <article>
+                    <h3>2024 — Nível 3</h3>
+                    <p>Cristiane Magarinos Sampaio</p>
+                    <p>Estela Baron Nakamura</p>
+                    <p>Gabriela Naomi Ichicawa Ogido</p>
+                    <p>Maria Eduarda Padilha Luz</p>
+                    <p>Sophia Ruanny Pires de Oliveira</p>
+                </article>
+
+            </div>
+
+            <div class="imagem-faixa">
+                <div class="imagem-placeholder">
+                    <img src="meninastrofeuobmep.jpg" alt="Troféu Meninas Olímpicas OBMEP">
+                    <span>Cerimônia da OBMEP</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="premios-secao secao-verde" id="poder-publico">
+        <div class="container">
+
+            <div class="titulo-secao titulo-claro">
+                <span>Reconhecimento institucional</span>
+                <h2>Homenagens do Poder Público</h2>
+            </div>
+
+            <p class="texto-claro">
+                Desde 2016, a Procuradoria Especial da Mulher da Assembleia
+                Legislativa do Rio Grande do Sul, em parceria com o Movimento
+                Meninas Olímpicas, homenageia meninas medalhistas de ouro.
+            </p>
+
+           <div class="cerimonias-grid cerimonia-unica">
+
+    <article>
+        <div class="imagem-placeholder">
+            <img
+                src="premioalers.JPG"
+                alt="Homenagens do Movimento Meninas Olímpicas na Assembleia Legislativa do Rio Grande do Sul entre 2016 e 2018"
+            >
+        </div>
+
+        <h3>
+            Homenagens na Assembleia Legislativa do Rio Grande do Sul — 2016 a 2018
+        </h3>
+    </article>
+
+</div>
+    <section class="premios-secao" id="semanas-olimpicas">
+        <div class="container">
+
+            <div class="titulo-secao">
+                <span>Semana Olímpica</span>
+                <h2>OBI e OBM</h2>
+                <p>
+                    Até 2016, os professores das Semanas Olímpicas da OBM e da OBI
+                    eram sempre homens. Em 2016, uma das primeiras ações do
+                    movimento foi apoiar a participação das meninas nesses espaços.
+                </p>
+            </div>
+
+            <div class="semanas-grid">
+
+                <article>
+                    <div class="imagem-placeholder">
+                        <img src="obi2016.JPG" alt="Semana Olímpica OBI 2016">
+                        <span>Imagem da Semana Olímpica OBI 2016</span>
+                    </div>
+                    <h3>Semana Olímpica OBI 2016</h3>
+                </article>
+
+                <article>
+                    <div class="imagem-placeholder">
+                        <img src="obi2022.JPG" alt="Semana Olímpica OBI 2022">
+                        <span>Imagem da Semana Olímpica OBI 2022</span>
+                    </div>
+                    <h3>Semana Olímpica OBI 2022</h3>
+                </article>
+
+                <article>
+                    <div class="imagem-placeholder">
+                        <img src="obm2016.jpg" alt="Semana Olímpica OBM 2016">
+                        <span>Imagem da Semana Olímpica OBM 2016</span>
+                    </div>
+                    <h3>Semana Olímpica OBM 2016</h3>
+                </article>
+
+                <article>
+                    <div class="imagem-placeholder">
+                        <img src="obm2022.jpg" alt="Semana Olímpica OBM 2022">
+                        <span>Imagem da Semana Olímpica OBM 2022</span>
+                    </div>
+                    <h3>Semana Olímpica OBM 2022</h3>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    
+<section class="frase-final">
+        <div class="container">
+            <p>
+                Meninas olímpicas de hoje serão as mulheres nos espaços de decisão do amanhã.
+            </p>
+            <span>Desde 2016 incentivando as meninas olímpicas.</span>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer" id="contato">
+    <div class="container footer-conteudo">
+
+        <div class="footer-marca">
+            <div class="footer-logo">
+                <img src="logo.jpg" alt="Logo do Movimento Meninas Olímpicas">
+                <div>
+                    <strong>Movimento Meninas Olímpicas</strong>
+                    <span>Desde 2016</span>
+                </div>
+            </div>
+
+            <p>
+                Meninas olímpicas de hoje serão as mulheres nos espaços de decisão do amanhã.
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Navegação</h3>
+            <a href="index.html">Início</a>
+            <a href="quem-somos.html">Quem somos</a>
+            <a href="observatorio.html">Observatório</a>
+            <a href="olimpiadas.html">Olimpíadas</a>
+            <a href="premios.html">Galeria de Prêmios</a>
+        </div>
+
+    </div>
+
+    <div class="footer-final">
+        <div class="container">
+            © 2026 Movimento Meninas Olímpicas. Todos os direitos reservados.
+        </div>
+    </div>
+</footer>
+
+<script>
+const menuButton = document.querySelector(".menu-mobile");
+const nav = document.querySelector("#nav-principal");
+const dropdowns = document.querySelectorAll(".dropdown");
+
+menuButton.addEventListener("click", () => {
+    const aberto = nav.classList.toggle("aberto");
+    menuButton.setAttribute("aria-expanded", String(aberto));
+    menuButton.querySelector("i").className =
+        aberto ? "ri-close-line" : "ri-menu-line";
+});
+
+dropdowns.forEach(dropdown => {
+    const button = dropdown.querySelector(".dropdown-toggle");
+
+    button.addEventListener("click", event => {
+        event.stopPropagation();
+
+        dropdowns.forEach(item => {
+            if (item !== dropdown) {
+                item.classList.remove("aberto");
+                item.querySelector(".dropdown-toggle")
+                    .setAttribute("aria-expanded", "false");
+            }
+        });
+
+        const aberto = dropdown.classList.toggle("aberto");
+        button.setAttribute("aria-expanded", String(aberto));
+    });
+});
+
+document.addEventListener("click", event => {
+    if (!event.target.closest(".site-header")) {
+        dropdowns.forEach(dropdown => {
+            dropdown.classList.remove("aberto");
+            dropdown.querySelector(".dropdown-toggle")
+                .setAttribute("aria-expanded", "false");
+        });
+    }
+});
+</script>
+
+</body>
+</html>

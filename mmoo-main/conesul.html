@@ -1,0 +1,655 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONESUL | Movimento Meninas Olímpicas</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="conesul.css">
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="container nav">
+
+        <a href="index.html" class="logo">
+            <img src="logo.jpg" alt="Logo do Movimento Meninas Olímpicas">
+            <div class="logo-text">
+                <strong>MOVIMENTO</strong>
+                <span>MENINAS OLÍMPICAS</span>
+            </div>
+        </a>
+
+        <nav id="nav-principal" aria-label="Navegação principal">
+            <a href="index.html">Início</a>
+
+            <div class="dropdown">
+                <button class="dropdown-toggle" type="button" aria-expanded="false">
+                    Quem somos
+                    <i class="ri-arrow-down-s-line"></i>
+                </button>
+
+                <div class="submenu">
+                    <a href="quem-somos.html">Equipe</a>
+                    <a href="biografia.html">Biografia</a>
+                    <a href="observatorio.html">Observatório</a>
+                    
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropdown-toggle" type="button" aria-expanded="false">
+                    Olimpíadas
+                    <i class="ri-arrow-down-s-line"></i>
+                </button>
+
+                <div class="submenu submenu-olimpiadas">
+                    <a href="olimpiadas.html">Página de Olimpíadas</a>
+                    <a href="olimpiadas.html#femininas">Olimpíadas femininas</a>
+                    <a href="olimpiadas.html#seletivas">Seletivas</a>
+                    <a href="olimpiadas.html#universalizadas">Universalizadas</a>
+                    <a href="olimpiadas.html#matematica">Matemática e Economia</a>
+                    <a href="olimpiadas.html#computacao">Computação e Tecnologia</a>
+                    <a href="olimpiadas.html#ciencias">Ciências da Natureza</a>
+                    <a href="olimpiadas.html#humanas">Humanas e Sociais</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropdown-toggle ativo" type="button" aria-expanded="false">
+                    Galeria de Prêmios
+                    <i class="ri-arrow-down-s-line"></i>
+                </button>
+
+                <div class="submenu submenu-premios">
+                    <a href="premios.html">Galeria de Prêmios</a>
+                    <a href="trofeus.html">Troféus Meninas Olímpicas</a>
+                    <a href="imo.html">IMO — Prêmio Mirzakhani</a>
+                    <a href="omcplp.html">OMCPLP</a>
+                    <a href="egoi.html">EGOI</a>
+                    <a href="egmo.html">EGMO</a>
+                    <a href="pagmo.html">PAGMO</a>
+                    <a href="conesul.html" class="ativo-submenu">Conesul</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropdown-toggle" type="button" aria-expanded="false">
+                    Trajetória <span class="seta">⌄</span>
+                </button>
+                <div class="submenu submenu-largo">
+                    <a href="acoes.html">Trajetória</a>
+                    <a href="homenagens.html">Homenagens</a>
+                    <a href="premio-jovem-talento.html">Prêmio Jovem Talento</a>
+                    <a href="premio-legislativo.html">Prêmio Legislativo</a>
+                </div>
+            </div>
+            <a href="index.html#contato">Contato</a>
+        </nav>
+
+        <a href="https://olimpiadas.ufsm.br/"
+           class="portal-btn"
+           target="_blank"
+           rel="noopener noreferrer">
+            Portal Olímpico
+            <i class="ri-arrow-right-up-line"></i>
+        </a>
+
+        <button class="menu-mobile"
+                type="button"
+                aria-label="Abrir menu"
+                aria-controls="nav-principal"
+                aria-expanded="false">
+            <i class="ri-menu-line"></i>
+        </button>
+
+    </div>
+</header>
+
+<main>
+
+    <section class="conesul-hero">
+        <div class="container conesul-hero-grid">
+
+            <div class="conesul-hero-texto">
+                <span>Olimpíada internacional</span>
+
+                <h1>
+                    Olimpíada de Matemática do
+                    <strong>Cone Sul</strong>
+                </h1>
+
+                <p>
+                    Uma competição internacional que reúne jovens talentos da
+                    porção meridional da América do Sul.
+                </p>
+
+                <div class="hero-botoes">
+                    <a href="#sobre" class="btn-principal">
+                        Conheça a CONESUL
+                        <i class="ri-arrow-down-line"></i>
+                    </a>
+
+                    <a href="#participacao" class="btn-secundario">
+                        Participação brasileira
+                    </a>
+                </div>
+            </div>
+
+            <div class="logo-conesul-area">
+                <div class="logo-conesul-box">
+                    <img
+                        src="conesullogo.jpg"
+                        alt="Logo da Olimpíada de Matemática do Cone Sul"
+                        onload="this.parentElement.classList.add('tem-imagem')"
+                        onerror="this.remove()"
+                    >
+                    <div class="logo-placeholder">
+                        <i class="ri-image-add-line"></i>
+                        <strong>Logo da CONESUL</strong>
+                        <span>Coloque o arquivo como conesul-logo.png</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="resumo-faixa">
+        <div class="container resumo-grid">
+
+            <article>
+                <span>Formato</span>
+                <strong>Equipes com 4 estudantes</strong>
+            </article>
+
+            <article>
+                <span>Faixa etária</span>
+                <strong>Participantes com menos de 16 anos</strong>
+            </article>
+
+            <article>
+                <span>Abrangência</span>
+                <strong>Países da América do Sul</strong>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="sobre-conesul" id="sobre">
+        <div class="container sobre-grid">
+
+            <div class="titulo-secao">
+                <span>Sobre a competição</span>
+                <h2>Matemática, intercâmbio e integração latino-americana</h2>
+            </div>
+
+            <div class="sobre-texto">
+                <p>
+                    A Cone Sul é uma competição internacional da qual participam
+                    os países da porção meridional da América do Sul, representados
+                    por equipes de quatro estudantes que não tenham feito 16 anos
+                    de idade em 31 de dezembro do ano imediatamente anterior à
+                    celebração da olimpíada.
+                </p>
+
+                <p>
+                    O torneio busca proporcionar uma oportunidade para os jovens
+                    participantes demonstrarem suas habilidades em matemática,
+                    além de possibilitar a troca de conhecimentos e reforçar os
+                    contatos interculturais entre estudantes do ensino básico de
+                    diversos países latino-americanos.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="participacao-secao" id="participacao">
+        <div class="container">
+
+            <div class="titulo-secao titulo-central">
+                <span>Histórico brasileiro</span>
+                <h2>Participação Feminina do Brasil na CONESUL</h2>
+                <p>
+                    Registros de equipes brasileiras com participação feminina
+                    em diferentes edições da competição.
+                </p>
+            </div>
+
+            <div class="edicoes-lista">
+
+                <article class="edicao-card">
+                    <div class="edicao-imagem imagem-box">
+                        <img
+                            src="conesul1.jpg"
+                            alt="Equipe brasileira da 28ª CONESUL, Equador, 2017"
+                            onload="this.parentElement.classList.add('tem-imagem')"
+                            onerror="this.remove()"
+                        >
+                        <div class="imagem-aviso">
+                            <i class="ri-image-add-line"></i>
+                            <strong>Imagem da 28ª CONESUL</strong>
+                            <span>conesul-2017.jpg</span>
+                        </div>
+                    </div>
+
+                    <div class="edicao-conteudo">
+                        <div class="edicao-topo">
+                            <span>28ª edição</span>
+                            <strong>Equador · 2017</strong>
+                        </div>
+
+                        <h3>Equipe brasileira</h3>
+
+                        <ul class="medalhas-lista">
+                            <li>
+                                <span class="medalha ouro">Ouro</span>
+                                <div>
+                                    <strong>Bernardo Peruzzo Trevisan</strong>
+                                    <small>Rio Grande do Sul</small>
+                                </div>
+                            </li>
+
+                            <li>
+                                <span class="medalha ouro">Ouro</span>
+                                <div>
+                                    <strong>Bruno Barros de Souza</strong>
+                                    <small>Tocantins</small>
+                                </div>
+                            </li>
+
+                            <li>
+                                <span class="medalha prata">Prata</span>
+                                <div>
+                                    <strong>Marcelo Hippolyto de Sandes</strong>
+                                    <small>Ceará</small>
+                                </div>
+                            </li>
+
+                            <li class="destaque-menina">
+                                <span class="medalha bronze">Bronze</span>
+                                <div>
+                                    <strong>Mariana Bigolin Groff</strong>
+                                    <small>Rio Grande do Sul</small>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="edicao-card edicao-invertida">
+                    <div class="edicao-imagem imagem-box">
+                        <img
+                            src="x.jpg"
+                           
+                            onerror="this.remove()"
+                        >
+                       
+                    </div>
+
+                    <div class="edicao-conteudo">
+                        <div class="edicao-topo">
+                            <span>21ª edição</span>
+                            <strong>Brasil · 2010</strong>
+                        </div>
+
+                        <h3>Equipe brasileira</h3>
+
+                        <ul class="medalhas-lista">
+                            <li>
+                                <span class="medalha ouro">Ouro</span>
+                                <div>
+                                    <strong>João Lucas Camelo Sá</strong>
+                                    <small>Ceará</small>
+                                </div>
+                            </li>
+
+                            <li class="destaque-menina">
+                                <span class="medalha prata">Prata</span>
+                                <div>
+                                    <strong>Maria Clara Mendes Silva</strong>
+                                    <small>Minas Gerais</small>
+                                </div>
+                            </li>
+
+                            <li>
+                                <span class="medalha prata">Prata</span>
+                                <div>
+                                    <strong>Gabriel Militão Vinhas Lopes</strong>
+                                    <small>Ceará</small>
+                                </div>
+                            </li>
+
+                            <li>
+                                <span class="medalha bronze">Bronze</span>
+                                <div>
+                                    <strong>Caique Porto Lira</strong>
+                                    <small>Ceará</small>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="edicao-card">
+                    <div class="edicao-imagem imagem-box">
+                        <img
+                            src="conesul2.png"
+                            alt="Equipe brasileira da 20ª CONESUL, Argentina, 2009"
+                            onload="this.parentElement.classList.add('tem-imagem')"
+                            onerror="this.remove()"
+                        >
+                        <div class="imagem-aviso">
+                            <i class="ri-image-add-line"></i>
+                            <strong>Imagem da 20ª CONESUL</strong>
+                            <span>conesul-2009.jpg</span>
+                        </div>
+                    </div>
+
+                    <div class="edicao-conteudo">
+                        <div class="edicao-topo">
+                            <span>20ª edição</span>
+                            <strong>Argentina · 2009</strong>
+                        </div>
+
+                        <h3>Equipe brasileira</h3>
+
+                        <ul class="medalhas-lista">
+                            <li>
+                                <span class="medalha prata">Prata</span>
+                                <div>
+                                    <strong>Matheus Barros de Paula</strong>
+                                    <small>São Paulo</small>
+                                </div>
+                            </li>
+
+                            <li class="destaque-menina">
+                                <span class="medalha prata">Prata</span>
+                                <div>
+                                    <strong>Deborah Barbosa Alves</strong>
+                                    <small>São Paulo</small>
+                                </div>
+                            </li>
+
+                            <li>
+                                <span class="medalha prata">Prata</span>
+                                <div>
+                                    <strong>Gabriel Militão Vinhas Lopes</strong>
+                                    <small>Ceará</small>
+                                </div>
+                            </li>
+
+                            <li>
+                                <span class="medalha bronze">Bronze</span>
+                                <div>
+                                    <strong>Matheus Secco Torres da Silva</strong>
+                                    <small>Rio de Janeiro</small>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="edicao-card edicao-invertida">
+                    <div class="edicao-imagem imagem-box">
+                        <img
+                            src="conesul3.png"
+                            alt="Equipe brasileira da 18ª CONESUL, Uruguai, 2007"
+                            onload="this.parentElement.classList.add('tem-imagem')"
+                            onerror="this.remove()"
+                        >
+                        <div class="imagem-aviso">
+                            <i class="ri-image-add-line"></i>
+                            <strong>Imagem da 18ª CONESUL</strong>
+                            <span>conesul-2007-18.jpg</span>
+                        </div>
+                    </div>
+
+                    <div class="edicao-conteudo">
+                        <div class="edicao-topo">
+                            <span>18ª edição</span>
+                            <strong>Uruguai · 2007</strong>
+                        </div>
+
+                        <h3>Equipe brasileira</h3>
+
+                        <ul class="medalhas-lista">
+                            <li>
+                                <span class="medalha ouro">Ouro</span>
+                                <div>
+                                    <strong>Renan Henrique Finder</strong>
+                                    <small>São Paulo</small>
+                                </div>
+                            </li>
+
+                            <li class="destaque-menina">
+                                <span class="medalha prata">Prata</span>
+                                <div>
+                                    <strong>Grazielly Muniz da Cunha</strong>
+                                    <small>Ceará</small>
+                                </div>
+                            </li>
+
+                            <li>
+                                <span class="medalha prata">Prata</span>
+                                <div>
+                                    <strong>Marcelo T. de Sá Oliveira Sales</strong>
+                                    <small>Ceará</small>
+                                </div>
+                            </li>
+
+                            <li>
+                                <span class="medalha bronze">Bronze</span>
+                                <div>
+                                    <strong>Thiago Ribeiro Ramos</strong>
+                                    <small>Minas Gerais</small>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="edicao-card">
+                    <div class="edicao-imagem imagem-box">
+                        <img
+                            src="conesul4.jpg"
+                            alt="Equipe brasileira da 13ª CONESUL"
+                            onload="this.parentElement.classList.add('tem-imagem')"
+                            onerror="this.remove()"
+                        >
+                        <div class="imagem-aviso">
+                            <i class="ri-image-add-line"></i>
+                            <strong>Imagem da 13ª CONESUL</strong>
+                            <span>conesul-13.jpg</span>
+                        </div>
+                    </div>
+
+                    <div class="edicao-conteudo">
+                        <div class="edicao-topo">
+                            <span>13ª edição</span>
+                            <strong>Uruguai · 2007</strong>
+                        </div>
+
+                        <h3>Equipe brasileira</h3>
+
+                        <ul class="medalhas-lista">
+                            <li>
+                                <span class="medalha ouro">Ouro</span>
+                                <div>
+                                    <strong>Alex Corrêa Abreu</strong>
+                                    <small>Rio de Janeiro</small>
+                                </div>
+                            </li>
+
+                            <li class="destaque-menina">
+                                <span class="medalha ouro">Ouro</span>
+                                <div>
+                                    <strong>Larissa C. Queiroz de Lima</strong>
+                                    <small>Ceará</small>
+                                </div>
+                            </li>
+
+                            <li>
+                                <span class="medalha ouro">Ouro</span>
+                                <div>
+                                    <strong>Rafael Daigo Hirama</strong>
+                                    <small>Ceará</small>
+                                </div>
+                            </li>
+
+                            <li>
+                                <span class="medalha bronze">Bronze</span>
+                                <div>
+                                    <strong>Israel Dourado Carrah</strong>
+                                    <small>Ceará</small>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+ <section class="larissa-secao-unica">
+    <div class="container larissa-conteudo-unico">
+
+        <div class="larissa-texto-unico">
+            <span>Trajetória em destaque</span>
+
+            <h2>Larissa Cavalcante Queiroz de Lima</h2>
+
+            <p>
+                Uma das brasileiras com presença marcante em diferentes
+                edições da Olimpíada de Matemática do Cone Sul.
+            </p>
+
+            <div class="larissa-medalhas-unicas">
+                <article>
+                    <strong>Ouro</strong>
+                    <span>13ª CONESUL</span>
+                    <small>Brasil · 2002</small>
+                </article>
+
+                <article>
+                    <strong>Prata</strong>
+                    <span>12ª CONESUL</span>
+                    <small>Chile · 2001</small>
+                </article>
+
+                <article>
+                    <strong>Prata</strong>
+                    <span>11ª CONESUL</span>
+                    <small>Uruguai · 2000</small>
+                </article>
+            </div>
+        </div>
+
+        <div class="larissa-foto-unica">
+            <img
+                src="conesul5.jpg"
+                alt="Larissa Cavalcante Queiroz de Lima"
+            >
+        </div>
+
+    </div>
+</section>
+
+    <section class="frase-final">
+        <div class="container">
+            <p>
+                Meninas olímpicas de hoje serão as mulheres nos espaços de decisão do amanhã.
+            </p>
+            <span>Desde 2016 incentivando as meninas olímpicas.</span>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer" id="contato">
+    <div class="container footer-conteudo">
+
+        <div class="footer-marca">
+            <div class="footer-logo">
+                <img src="logo.jpg" alt="Logo do Movimento Meninas Olímpicas">
+                <div>
+                    <strong>Movimento Meninas Olímpicas</strong>
+                    <span>Desde 2016</span>
+                </div>
+            </div>
+
+            <p>
+                Meninas olímpicas de hoje serão as mulheres nos espaços de decisão do amanhã.
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Navegação</h3>
+            <a href="index.html">Início</a>
+            <a href="quem-somos.html">Quem somos</a>
+            <a href="observatorio.html">Observatório</a>
+            <a href="olimpiadas.html">Olimpíadas</a>
+            <a href="premios.html">Galeria de Prêmios</a>
+        </div>
+
+    </div>
+
+    <div class="footer-final">
+        <div class="container">
+            © 2026 Movimento Meninas Olímpicas. Todos os direitos reservados.
+        </div>
+    </div>
+</footer>
+
+<script>
+const menuButton = document.querySelector(".menu-mobile");
+const nav = document.querySelector("#nav-principal");
+const dropdowns = document.querySelectorAll(".dropdown");
+
+menuButton.addEventListener("click", () => {
+    const aberto = nav.classList.toggle("aberto");
+    menuButton.setAttribute("aria-expanded", String(aberto));
+    menuButton.querySelector("i").className =
+        aberto ? "ri-close-line" : "ri-menu-line";
+});
+
+dropdowns.forEach(dropdown => {
+    const button = dropdown.querySelector(".dropdown-toggle");
+
+    button.addEventListener("click", event => {
+        event.stopPropagation();
+
+        dropdowns.forEach(item => {
+            if (item !== dropdown) {
+                item.classList.remove("aberto");
+                item.querySelector(".dropdown-toggle")
+                    .setAttribute("aria-expanded", "false");
+            }
+        });
+
+        const aberto = dropdown.classList.toggle("aberto");
+        button.setAttribute("aria-expanded", String(aberto));
+    });
+});
+
+document.addEventListener("click", event => {
+    if (!event.target.closest(".site-header")) {
+        dropdowns.forEach(dropdown => {
+            dropdown.classList.remove("aberto");
+            dropdown.querySelector(".dropdown-toggle")
+                .setAttribute("aria-expanded", "false");
+        });
+    }
+});
+</script>
+
+</body>
+</html>
